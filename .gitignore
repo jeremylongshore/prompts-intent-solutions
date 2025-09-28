@@ -1,0 +1,33 @@
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+
+# Local Environment
+.env
+.env.local
+
+# Build Artifacts
+dist/
+build/
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Personal Notes (not part of templates)
+scratch/
+personal/
+drafts/

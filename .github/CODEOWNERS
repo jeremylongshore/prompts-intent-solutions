@@ -1,0 +1,39 @@
+# CODEOWNERS - Auto-assign reviewers for different parts of the repository
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners (default reviewers for everything)
+* @jeremylongshore
+
+# Documentation
+*.md @jeremylongshore
+docs/ @jeremylongshore
+.github/ @jeremylongshore
+
+# Prompt templates - require template expertise
+planning/ @jeremylongshore
+setup/ @jeremylongshore
+debugging/ @jeremylongshore
+features/ @jeremylongshore
+testing/ @jeremylongshore
+cleaning/ @jeremylongshore
+security/ @jeremylongshore
+
+# Project specifications - require architectural review
+project-specs/ @jeremylongshore
+
+# Tools and automation - require technical review
+tools/ @jeremylongshore
+.github/workflows/ @jeremylongshore
+
+# Configuration files - require careful review
+*.yml @jeremylongshore
+*.yaml @jeremylongshore
+*.json @jeremylongshore
+.gitignore @jeremylongshore
+
+# ADRs require architectural review
+docs/ADR* @jeremylongshore
+
+# Security-sensitive files
+SECURITY.md @jeremylongshore
+.github/workflows/ @jeremylongshore
