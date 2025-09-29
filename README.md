@@ -45,7 +45,7 @@ python .github/scripts/validate-templates.py
 | **[FEAT](features/)** | Feature development & enhancement | ✨ New functionality, improvements | Feature development, enhancement requests |
 | **[TEST](testing/)** | Testing & validation | 🧪 Test strategies, QA processes | Test planning, quality assurance |
 | **[CLEAN](maintenance/)** | Maintenance & optimization | 🧹 Code cleanup, refactoring | Code refactoring, technical debt |
-| **[SEC](security/)** | Security-focused prompts | 🔒 Security audits, threat analysis | Security reviews, vulnerability assessment |
+| **[SEC](security/)** | Security-focused prompts | 🔒 Security audits, threat analysis | Security reviews, vulnerability assessment, MCP diagnostics |
 
 ## 💼 Business-Focused Prompts
 
@@ -64,6 +64,9 @@ Real prompts that save hours and make money for small businesses:
 - **[Customer Complaint Converter](customer-success/complaint-to-gold.md)** - 73% turnaround rate
 - **[Social Media Week Generator](marketing-sales/social-media-week.md)** - Save 4-6 hours weekly
 - **[Invoice Follow-upper](finance/invoice-follower-upper.md)** - 94% collection rate
+
+### 🔒 Developer Security Tools
+- **[MCP Repo Diagnostic](security/SEC-001-mcp-repo-diagnostic-092825.md)** - Forensic analysis for broken MCP servers
 
 ## 🔥 Featured Templates
 
