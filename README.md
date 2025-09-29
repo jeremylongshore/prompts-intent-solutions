@@ -47,6 +47,24 @@ python .github/scripts/validate-templates.py
 | **[CLEAN](maintenance/)** | Maintenance & optimization | 🧹 Code cleanup, refactoring | Code refactoring, technical debt |
 | **[SEC](security/)** | Security-focused prompts | 🔒 Security audits, threat analysis | Security reviews, vulnerability assessment |
 
+## 💼 Business-Focused Prompts
+
+Real prompts that save hours and make money for small businesses:
+
+| Category | Purpose | High-Impact Prompts |
+|----------|---------|---------------------|
+| **[Marketing & Sales](marketing-sales/)** | Lead generation & conversion | LinkedIn outreach, email campaigns, product descriptions |
+| **[Operations](operations/)** | Process efficiency | Meeting summaries, process documentation |
+| **[Customer Success](customer-success/)** | Retention & satisfaction | Complaint resolution, support responses |
+| **[Finance](finance/)** | Cash flow & reporting | Invoice follow-ups, financial reports |
+| **[People & Culture](people-culture/)** | Hiring & team building | Job descriptions, performance reviews |
+
+### 🚀 Quick Business Wins
+- **[LinkedIn Meeting Booker](marketing-sales/linkedin-meeting-booker.md)** - 23% response rate, books $40K deals
+- **[Customer Complaint Converter](customer-success/complaint-to-gold.md)** - 73% turnaround rate
+- **[Social Media Week Generator](marketing-sales/social-media-week.md)** - Save 4-6 hours weekly
+- **[Invoice Follow-upper](finance/invoice-follower-upper.md)** - 94% collection rate
+
 ## 🔥 Featured Templates
 
 ### 🌟 Most Popular
