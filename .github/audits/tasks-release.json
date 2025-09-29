@@ -1,0 +1,15 @@
+[
+{"id":109,"description":"Complete repository audit for","entry":"20250929T233325Z","modified":"20250929T233325Z","priority":"H","status":"pending","uuid":"64c9fba6-f40c-4a87-a189-9bb372d85e2b","tags":["AUDIT"],"urgency":6.8},
+{"id":110,"description":"Analyze code quality","entry":"20250929T233325Z","modified":"20250929T233325Z","status":"pending","uuid":"1ab8a85c-d1c6-43c7-98d7-4283254a0ea6","tags":["ANALYZE"],"urgency":0.8},
+{"id":111,"description":"Assess documentation","entry":"20250929T233325Z","modified":"20250929T233325Z","status":"pending","uuid":"c2619cc5-e5a6-445c-b327-8edb0b635fe6","tags":["DOCUMENT"],"urgency":0.8},
+{"id":0,"description":"Initialize GitHub integration","end":"20250929T233659Z","entry":"20250929T233325Z","modified":"20250929T233659Z","status":"completed","uuid":"3e6cfe33-bd8e-4631-ad5b-d3a3a620c212","tags":["SETUP"],"urgency":0.8},
+{"id":0,"description":"Scan repository infrastructure","end":"20250929T233352Z","entry":"20250929T233325Z","modified":"20250929T233352Z","status":"completed","uuid":"769beeec-48e2-4f96-ae68-61601320ee1f","tags":["SCAN"],"urgency":0.8},
+{"id":0,"description":"Generate findings report","end":"20250929T233527Z","entry":"20250929T233325Z","modified":"20250929T233527Z","status":"completed","uuid":"8263a26a-7130-4d21-ad8d-2778d757c83e","tags":["REPORT"],"urgency":0.8},
+{"id":0,"description":"Prepare for chore phase","end":"20250929T233527Z","entry":"20250929T233325Z","modified":"20250929T233527Z","status":"completed","uuid":"756d210e-3a1f-4a78-9ccc-c49bcc72858f","tags":["HANDOFF"],"urgency":0.8},
+{"id":0,"description":"fix github pageson xintrnt nuke","end":"20250929T051312Z","entry":"20250928T091151Z","modified":"20250929T051312Z","status":"completed","uuid":"1b706454-a73c-4f8c-998d-fcf729b35416","urgency":0.00547945},
+{"id":0,"description":"fix jeremy@vmi crap on zsh","end":"20250928T085901Z","entry":"20250928T085533Z","modified":"20250928T085901Z","status":"completed","uuid":"be94d3ad-a5be-4909-bea2-2b57716ab814","urgency":0.00547945},
+{"id":0,"description":"read a book","end":"20250928T080226Z","entry":"20250928T075909Z","modified":"20250928T080226Z","status":"completed","uuid":"7f12e486-327a-404e-ab08-487e67f710b2","urgency":0.00547945},
+{"id":0,"description":"clean desk","end":"20250928T080232Z","entry":"20250928T075925Z","modified":"20250928T080232Z","status":"completed","uuid":"3e9bbc37-1463-4652-954e-c11e7d4d862e","urgency":0.00547945},
+{"id":0,"description":"call mom tomorrow","end":"20250928T080215Z","entry":"20250928T075919Z","modified":"20250928T080215Z","status":"completed","uuid":"40013d0e-b0e4-44a1-ac37-64d411977570","urgency":0.00547945},
+{"id":0,"description":"learn taskwarrior basics","end":"20250928T075942Z","entry":"20250928T075815Z","modified":"20250928T075942Z","status":"completed","uuid":"a8e1a432-75c7-4b87-9c15-dc5617a61a08","urgency":0.00547945}
+]
