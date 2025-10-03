@@ -1,0 +1,31 @@
+# Global code owners
+* @jeremylongshore
+
+# Specific category ownership
+/planning/ @jeremylongshore
+/setup/ @jeremylongshore
+/debugging/ @jeremylongshore
+/features/ @jeremylongshore
+/testing/ @jeremylongshore
+/maintenance/ @jeremylongshore
+/security/ @jeremylongshore
+/tools/ @jeremylongshore
+
+# Business prompts
+/marketing-sales/ @jeremylongshore
+/operations/ @jeremylongshore
+/customer-success/ @jeremylongshore
+/finance/ @jeremylongshore
+/people-culture/ @jeremylongshore
+
+# Documentation and governance
+/docs/ @jeremylongshore
+/.github/ @jeremylongshore
+CONTRIBUTING.md @jeremylongshore
+SECURITY.md @jeremylongshore
+README.md @jeremylongshore
+LICENSE @jeremylongshore
+
+# CI/CD and automation
+/.github/workflows/ @jeremylongshore
+/tools/*.py @jeremylongshore

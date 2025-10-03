@@ -1,0 +1,11 @@
+{
+  "chore_id": "chore-20250929-180000",
+  "audit_id": "audit-20250929-170000",
+  "milestone": "Audit Improvements",
+  "pr_number": 0,
+  "fixed_issues": 15,
+  "manual_required": 3,
+  "branch": "main",
+  "created_at": "2025-09-29T18:00:00Z",
+  "status": "completed"
+}
