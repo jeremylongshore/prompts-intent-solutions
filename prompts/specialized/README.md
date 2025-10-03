@@ -43,18 +43,18 @@ model: recommended-model
 # Agent definition with capabilities and behavioral traits
 ```
 
-## Professional Grade
+## Production Quality
 
-These configurations represent enterprise-level AI assistance:
-- **Battle-tested** in production environments
+These configurations represent professional-grade AI assistance:
+- **Battle-tested** in real development environments
 - **Role-specific expertise** for focused assistance
-- **Professional standards** with consistent quality
+- **High-quality standards** with consistent performance
 - **Comprehensive coverage** across development disciplines
 
 ## Integration
 
 Perfect for:
 - **Development Teams** - Specialized coding assistance
-- **Enterprise Projects** - Professional-grade AI support
+- **Professional Projects** - Production-ready AI support
 - **Consulting Firms** - Client-specific configurations
 - **Training Programs** - Educational AI assistance

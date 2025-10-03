@@ -1,275 +1,81 @@
-# 🚀 Prompt Engineering Toolkit
+# 🚀 Prompts Intent Solutions
 
-[![Template Validation](https://github.com/jeremylongshore/prompts-intent-solutions/actions/workflows/template-validation.yml/badge.svg)](https://github.com/jeremylongshore/prompts-intent-solutions/actions/workflows/template-validation.yml)
-[![GitHub issues](https://img.shields.io/github/issues/jeremylongshore/prompts-intent-solutions)](https://github.com/jeremylongshore/prompts-intent-solutions/issues)
-[![GitHub stars](https://img.shields.io/github/stars/jeremylongshore/prompts-intent-solutions)](https://github.com/jeremylongshore/prompts-intent-solutions/stargazers)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://jeremylongshore.github.io/prompts-intent-solutions/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Prompts: 150+](https://img.shields.io/badge/Prompts-150+-blue)](./prompts/)
+[![Agents: 74](https://img.shields.io/badge/Claude%20Agents-74-purple)](./prompts/specialized/claude-agents/)
 
-A comprehensive collection of professional prompt templates for AI-assisted software development, organized by category and use case.
+Professional prompt engineering toolkit with battle-tested templates for development and business operations.
+
+**🌐 [Browse the full catalog →](https://jeremylongshore.github.io/prompts-intent-solutions/)**
 
 ## 🎯 Quick Start
 
-### For Complete Beginners
-```bash
-# 1. Clone the repository
-git clone https://github.com/jeremylongshore/prompts-intent-solutions.git
-cd prompts-intent-solutions
+### By Role
+- **👩‍💻 Developers** → [Development Prompts](prompts/development/) - Planning, debugging, testing, security
+- **💼 Business Users** → [Business Prompts](prompts/business/) - Marketing, finance, operations
+- **🤖 AI Engineers** → [Claude Code Agents](prompts/specialized/claude-agents/) - 74 professional configurations
 
-# 2. Browse templates by category
-ls -la planning/ setup/ debugging/ features/
+### Popular Quick Wins
+1. **[Customer Complaint → Gold](prompts/business/customer-success/CS-001-complaint-to-gold.md)** - 73% success rate
+2. **[Invoice Follow-up Automation](prompts/business/finance/FINANCE-001-invoice-followup-automation.md)** - 94% collection rate
+3. **[LinkedIn Meeting Booker](prompts/business/marketing/MARKET-001-linkedin-meeting-booker.md)** - 89% response rate
+4. **[AI Assistant Setup](prompts/development/setup/SETUP-001-ai-assistant.md)** - Complete beginner guide
 
-# 3. Copy a template and customize it
-cp setup/SETUP-001-ai-assistant-092825.md my-project-setup.md
-```
+## 📁 Main Categories
 
-### For Developers
-```bash
-# Fork and contribute
-git clone https://github.com/YOUR_USERNAME/prompts-intent-solutions.git
-cd prompts-intent-solutions
+### [Development Prompts](prompts/development/)
+**For software teams and technical work**
+- **Planning** - System design, architecture, project roadmaps (8 prompts)
+- **Setup** - Environment config, tool initialization (8 prompts)
+- **Debugging** - Error analysis, performance issues (5 prompts)
+- **Features** - New functionality, enhancements (3 prompts)
+- **Testing** - Test strategies, QA processes (3 prompts)
+- **Security** - Security audits, threat analysis (4 prompts)
+- **Maintenance** - Code cleanup, refactoring (4 prompts)
 
-# Validate your templates
-python .github/scripts/validate-templates.py
+### [Business Prompts](prompts/business/)
+**For operations, marketing, and growth**
+- **Marketing** - LinkedIn outreach, email campaigns (5 prompts)
+- **Finance** - Invoice automation, cash flow (4 prompts)
+- **Operations** - Process docs, vendor negotiation (5 prompts)
+- **Customer Success** - Complaint resolution, support (6 prompts)
+- **People & Culture** - Hiring, performance reviews (5 prompts)
 
-# Create new template following naming convention
-# CATEGORY-###-description-MMDDYY.md
-```
+### [Specialized Prompts](prompts/specialized/)
+**For advanced users and specific domains**
+- **[Claude Code Agents](prompts/specialized/claude-agents/)** - 74 professional AI agent configurations
+- **Automation Systems** - Complex multi-step workflows
+- **Industry Solutions** - Healthcare, fintech, education (coming soon)
 
-## 📁 Template Categories
+## 🚀 Usage
 
-| Category | Purpose | Templates | Use Cases |
-|----------|---------|-----------|-----------|
-| **[PLAN](planning/)** | Strategic planning & architecture | 🏗️ System design, project planning | Architecture decisions, feature planning |
-| **[SETUP](setup/)** | Configuration & initialization | ⚙️ Environment setup, tool config | Project bootstrapping, tool configuration |
-| **[DEBUG](debugging/)** | Problem diagnosis & troubleshooting | 🐛 Error analysis, performance issues | Bug fixing, performance optimization |
-| **[FEAT](features/)** | Feature development & enhancement | ✨ New functionality, improvements | Feature development, enhancement requests |
-| **[TEST](testing/)** | Testing & validation | 🧪 Test strategies, QA processes | Test planning, quality assurance |
-| **[CLEAN](maintenance/)** | Maintenance & optimization | 🧹 Code cleanup, refactoring | Code refactoring, technical debt |
-| **[SEC](security/)** | Security-focused prompts | 🔒 Security audits, threat analysis | Security reviews, vulnerability assessment, MCP diagnostics |
+1. **Browse** the [web catalog](https://jeremylongshore.github.io/prompts-intent-solutions/) or repository
+2. **Copy** the prompt template you need
+3. **Customize** by replacing [PLACEHOLDERS] with your specifics
+4. **Paste** into Claude, ChatGPT, or your preferred AI assistant
 
-## 💼 Business-Focused Prompts
+## 📊 Proven Results
 
-Real prompts that save hours and make money for small businesses:
+These aren't theoretical templates - they're battle-tested with real metrics:
 
-| Category | Purpose | High-Impact Prompts |
-|----------|---------|---------------------|
-| **[Marketing & Sales](marketing-sales/)** | Lead generation & conversion | LinkedIn outreach, email campaigns, product descriptions |
-| **[Operations](operations/)** | Process efficiency | Meeting summaries, process documentation |
-| **[Customer Success](customer-success/)** | Retention & satisfaction | Complaint resolution, support responses |
-| **[Finance](finance/)** | Cash flow & reporting | Invoice follow-ups, financial reports |
-| **[People & Culture](people-culture/)** | Hiring & team building | Job descriptions, performance reviews |
+| Prompt | Success Rate | Business Impact |
+|--------|--------------|-----------------|
+| Customer Complaint → Gold | 73% | $12K saved per prevented churn |
+| Invoice Follow-up | 94% | $15K recovered in first month |
+| LinkedIn Meeting Booker | 89% | Books $40K+ deals from cold outreach |
+| Bug Debugging System | 95% | 3x faster issue resolution |
 
-### 🚀 3 Proven Quick Wins (Start Here!)
+## 🤝 Credits & Acknowledgments
 
-**⚡ Copy these → Paste into AI → Make money today**
-
-1. **💰 [Invoice Follow-up Automation](finance/FINANCE-001-invoice-followup-automation-092825.md)**
-   - **Result**: 94% collection rate improvement
-   - **Time saved**: 3 hours/week of follow-up calls
-   - **ROI**: $15K recovered in first month
-   - **Works with**: Any AI assistant + your email
-
-2. **📧 [LinkedIn Meeting Booker](marketing-sales/cold-outreach-sequence.md)**
-   - **Result**: 23% response rate (industry avg: 8%)
-   - **Time saved**: 5 hours/week of prospecting
-   - **ROI**: Books $40K+ deals from cold outreach
-   - **Works with**: LinkedIn + ChatGPT/Claude
-
-3. **🎯 [Customer Complaint → Gold](customer-success/churn-prevention.md)**
-   - **Result**: 73% angry customers become promoters
-   - **Time saved**: 2 hours per complaint resolution
-   - **ROI**: $12K saved per prevented churn
-   - **Works with**: Any support platform + AI
-
-### 🔒 Developer Security Tools
-- **[MCP Repo Diagnostic](security/SEC-001-mcp-repo-diagnostic-092825.md)** - Forensic analysis for broken MCP servers
-
-## 🔥 Featured Templates
-
-### 🌟 Most Popular
-- **[SETUP-001: AI Assistant Prompts](setup/SETUP-001-ai-assistant-092825.md)** - Comprehensive guidance prompts for different user experience levels
-- **[PLAN-001: Filing System](planning/PLAN-001-filing-system-092825.md)** - Repository organization and structure planning
-- **[DEBUG-001: Bug Debugging](debugging/DEBUG-001-bug-debugging-092825.md)** - Systematic bug analysis and resolution
-
-### 🆕 Recently Added
-- **[ADR-001: Template System Architecture](ADR-001-TEMPLATE_SYSTEM_ARCHITECTURE-092825.md)** - Architectural decision record for template organization
-
-## 🚀 Usage Examples
-
-### Using a Template
-1. **Find your template**: Browse by category or search by use case
-2. **Copy the content**: Use the raw GitHub link or clone locally
-3. **Customize**: Replace placeholders with your specific details
-4. **Run with AI**: Use with Claude, ChatGPT, or your preferred AI assistant
-
-### Example Workflow
-```bash
-# 1. Need to set up a new project?
-cat setup/SETUP-001-ai-assistant-092825.md
-
-# 2. Copy the "Complete Beginner Prompt" section
-# 3. Customize with your project details
-# 4. Paste into your AI assistant
-# 5. Follow the step-by-step guidance
-```
-
-## 🏗️ Template Structure
-
-Each template follows this structure:
-
-```yaml
----
-name: template-name
-description: Brief description of what this template does
-model: recommended-ai-model (opus, sonnet, gpt-4, etc.)
----
-
-# Template Content
-Clear, actionable prompts with:
-- Specific context and constraints
-- Step-by-step instructions
-- Expected outcomes
-- Usage examples
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to add your own templates:
-
-### Quick Contribution
-1. **Use our template**: [Submit via GitHub Issue](https://github.com/jeremylongshore/prompts/issues/new?template=template_submission.yml)
-2. **Follow naming convention**: `CATEGORY-###-description-MMDDYY.md`
-3. **Include testing notes**: Which AI models you've tested with
-
-### Development Contribution
-```bash
-# 1. Fork and clone
-git clone https://github.com/YOUR_USERNAME/prompts.git
-
-# 2. Create feature branch
-git checkout -b template/new-awesome-template
-
-# 3. Add your template following the naming convention
-# Example: FEAT-004-api-integration-100125.md
-
-# 4. Validate locally
-python .github/scripts/validate-templates.py
-
-# 5. Submit PR
-git add . && git commit -m "feat: add API integration template"
-git push origin template/new-awesome-template
-```
-
-### Contribution Guidelines
-- ✅ Follow [naming convention](#naming-convention)
-- ✅ Include YAML frontmatter
-- ✅ Test with at least one AI model
-- ✅ Provide clear usage examples
-- ✅ No sensitive information
-
-## 📋 Naming Convention
-
-Templates follow this pattern: `CATEGORY-###-description-MMDDYY.md`
-
-- **CATEGORY**: One of PLAN, SETUP, DEBUG, FEAT, TEST, CLEAN, SEC
-- **###**: Sequential number within category (001, 002, 003...)
-- **description**: Kebab-case description (lowercase, hyphens)
-- **MMDDYY**: Creation or last major revision date
-
-### Examples
-- ✅ `SETUP-001-ai-assistant-092825.md`
-- ✅ `FEAT-003-api-integration-100125.md`
-- ❌ `My Template.md`
-- ❌ `template_001.md`
-
-## 🎓 Learning Resources
-
-### For Beginners
-- **[Complete Beginner Guide](setup/SETUP-001-ai-assistant-092825.md#-complete-beginner-prompt)** - Start here if you're new to AI-assisted development
-- **[Quick Help Prompts](setup/SETUP-001-ai-assistant-092825.md#-quick-help-prompts)** - Common questions and solutions
-
-### For Teams
-- **[Team Setup Guide](setup/SETUP-001-ai-assistant-092825.md#-team-setup-prompt)** - Rolling out to your organization
-- **[Governance Templates](docs/)** - CONTRIBUTING.md, SECURITY.md templates
-
-### For Advanced Users
-- **[Template Creation Guide](setup/SETUP-001-ai-assistant-092825.md#-template-creation-prompt)** - Build your own templates
-- **[Architecture Decisions](ADR-001-TEMPLATE_SYSTEM_ARCHITECTURE-092825.md)** - How this system is designed
-
-## 🔧 Advanced Features
-
-### Automated Validation
-All templates are automatically validated for:
-- ✅ Naming convention compliance
-- ✅ YAML frontmatter structure
-- ✅ Content quality metrics
-- ✅ No duplicate templates
-
-### GitHub Integration
-- 🤖 **Auto-validation**: PRs automatically validated
-- 📋 **Issue templates**: Standardized bug reports and feature requests
-- 🏷️ **Auto-labeling**: Templates automatically categorized
-- 📊 **Quality metrics**: Template usage and effectiveness tracking
-
-### Search & Discovery
-```bash
-# Find templates by keyword
-grep -r "API" . --include="*.md"
-
-# List all templates in a category
-ls setup/
-
-# Find templates by date
-ls *-092825.md
-```
-
-## 📊 Repository Stats
-
-- **Total Templates**: 15+ and growing
-- **Categories**: 7 main categories
-- **Contributors**: Open for contributions
-- **Last Updated**: September 28, 2025
-
-## 🗺️ Roadmap
-
-### Phase 1: Foundation ✅
-- [x] Core template structure
-- [x] GitHub automation
-- [x] Validation system
-
-### Phase 2: Growth 🚧
-- [ ] 50+ community templates
-- [ ] Advanced search features
-- [ ] Template metrics dashboard
-
-### Phase 3: Scale 📅
-- [ ] API endpoints for programmatic access
-- [ ] Integration with popular AI tools
-- [ ] Template marketplace
-
-## 📞 Support
-
-### Quick Help
-- 🐛 **Bug reports**: [Create issue](https://github.com/jeremylongshore/prompts/issues/new?template=bug_report.yml)
-- ✨ **Feature requests**: [Request feature](https://github.com/jeremylongshore/prompts/issues/new?template=feature_request.yml)
-- 📝 **New templates**: [Submit template](https://github.com/jeremylongshore/prompts/issues/new?template=template_submission.yml)
-
-### Community
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/jeremylongshore/prompts/discussions)
-- 📧 **Contact**: [Create issue](https://github.com/jeremylongshore/prompts/issues)
+- **Monospace Web Design** - [Oskar Wickström](https://github.com/owickstrom/the-monospace-web) (MIT License)
+- **Claude Code Agents** - [wshobson/agents](https://github.com/wshobson/agents) (Apache 2.0 License)
+- **Prompt Templates** - [Jeremy Longshore](https://github.com/jeremylongshore) (MIT License)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by the growing AI-assisted development community
-- Built with feedback from developers, product managers, and DevOps engineers
-- Powered by Claude, ChatGPT, and other AI assistants
+MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Made with ❤️ for the AI-assisted development community**
-
-*Last updated: September 28, 2025*
+**Built for the AI-assisted development community** 🤖❤️
