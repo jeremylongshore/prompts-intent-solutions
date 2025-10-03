@@ -36,7 +36,7 @@ jobs:
       run: python tools/check_duplicates.py
 
     - name: Validate markdown syntax
-      uses: DavidAnson/markdownlint-cli2-action@v13
+      uses: DavidAnson/markdownlint-cli2-action@v20
       with:
         globs: '**/*.md'
         config: '.markdownlint.json'
