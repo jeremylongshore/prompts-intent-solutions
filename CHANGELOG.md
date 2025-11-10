@@ -1,6 +1,18 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+Format: Newest entries on TOP (reverse chronological order).
+
+## [Unreleased]
+### Changed
+- Applied MASTER DIRECTORY STANDARDS to repository structure
+- Updated README.md and CLAUDE.md with directory standards references
+- Reorganized CHANGELOG.md to newest-first format
+- Archived legacy multi-folder prompt catalog under `99-Archive/legacy-prompts/`
+- Introduced flat operator-grade prompt library aligned to Intent Solutions service lines
+- Replaced GitHub Pages site with dark, operator-first design fed by generated metadata
+- Added `tools/generate_prompt_catalog.py` to keep site data in sync with prompt front matter
+- Adopted alphabet-index numeric prefixes (`01-`, `03-`, `12-`, `15-`) across prompt IDs and filenames for consistent ordering
 
 ## [1.0.1] - 2025-10-02
 

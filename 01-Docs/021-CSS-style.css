@@ -1,0 +1,176 @@
+/**
+ * Monospace Web Design adapted from Oskar Wickström
+ * Original: https://github.com/owickstrom/the-monospace-web
+ * Licensed under MIT License
+ **/
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+
+:root {
+  --font-family: "JetBrains Mono", monospace;
+  --line-height: 1.20rem;
+  --border-thickness: 2px;
+  --text-color: #000;
+  --text-color-alt: #666;
+  --background-color: #fff;
+  --background-color-alt: #eee;
+
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --text-color-alt: #aaa;
+    --background-color: #000;
+    --background-color-alt: #111;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: var(--line-height);
+  max-width: calc(80ch + 2 * var(--line-height));
+  min-height: calc(100% - 2 * var(--line-height));
+  line-height: var(--line-height);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  line-height: var(--line-height);
+}
+
+h1 { font-size: 1.2rem; }
+h2 { font-size: 1.1rem; margin-top: calc(2 * var(--line-height)); }
+h3 { font-size: 1rem; margin-top: var(--line-height); }
+
+p {
+  margin: 0;
+  margin-top: var(--line-height);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-thickness);
+  text-underline-offset: calc(var(--border-thickness) * 2);
+}
+
+a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--line-height);
+}
+
+table.header {
+  margin-top: 0;
+  margin-bottom: calc(2 * var(--line-height));
+}
+
+th, td {
+  padding: 0 calc(var(--line-height) / 2);
+  line-height: var(--line-height);
+  border: var(--border-thickness) solid var(--text-color);
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  font-weight: var(--font-weight-bold);
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+td.width-min {
+  width: 1px;
+  white-space: nowrap;
+}
+
+td.width-auto {
+  width: auto;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.subtitle {
+  color: var(--text-color-alt);
+  font-size: 0.9rem;
+}
+
+section {
+  margin-bottom: calc(2 * var(--line-height));
+}
+
+footer {
+  margin-top: calc(2 * var(--line-height));
+  padding-top: var(--line-height);
+  border-top: var(--border-thickness) solid var(--text-color);
+  text-align: center;
+  color: var(--text-color-alt);
+}
+
+code, pre {
+  font-family: var(--font-family);
+  background-color: var(--background-color-alt);
+  padding: 0 calc(var(--line-height) / 4);
+}
+
+pre {
+  padding: calc(var(--line-height) / 2);
+  margin-top: var(--line-height);
+  overflow-x: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  body {
+    padding: calc(var(--line-height) / 2);
+    max-width: none;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: calc(var(--line-height) / 4);
+  }
+}

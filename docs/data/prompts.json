@@ -1,0 +1,119 @@
+[
+  {
+    "id": "01-agent-copilot-design",
+    "title": "Operator Copilot Design Workshop",
+    "service_line": "ai-agents",
+    "audience": "Product + AI engineer duo",
+    "intent": "Design a Claude-based copilot tailored to an operator workflow.",
+    "delivery": "copilot design brief",
+    "file": "01-agent-copilot-design"
+  },
+  {
+    "id": "01-agent-slash-command-draft",
+    "title": "Slash Command Prompt Drafting",
+    "service_line": "ai-agents",
+    "audience": "AI engineer",
+    "intent": "Craft reusable slash-command prompts for Claude that mirror Intent Solutions standards.",
+    "delivery": "slash command bundle",
+    "file": "01-agent-slash-command-draft"
+  },
+  {
+    "id": "01-ai-private-model-rollout",
+    "title": "Private Model Rollout Plan",
+    "service_line": "private-ai",
+    "audience": "MLOps lead",
+    "intent": "Launch a private AI model with governance, observability, and operator training.",
+    "delivery": "rollout plan",
+    "file": "01-ai-private-model-rollout"
+  },
+  {
+    "id": "01-auto-incident-escalation",
+    "title": "Automation-Assisted Incident Escalation",
+    "service_line": "automation",
+    "audience": "Incident commander",
+    "intent": "Design a reliable escalation workflow that blends humans and automations.",
+    "delivery": "incident escalation playbook",
+    "file": "01-auto-incident-escalation"
+  },
+  {
+    "id": "01-auto-n8n-flow-upgrade",
+    "title": "n8n Workflow Resilience Upgrade",
+    "service_line": "automation",
+    "audience": "Automation engineer",
+    "intent": "Refactor n8n workflows for resilience, observability, and reseller packaging.",
+    "delivery": "upgrade plan + updated workflow narrative",
+    "file": "01-auto-n8n-flow-upgrade"
+  },
+  {
+    "id": "03-cloud-architecture-due-diligence",
+    "title": "Cloud Architecture Due Diligence",
+    "service_line": "cloud-data",
+    "audience": "Solutions architect",
+    "intent": "Evaluate cloud architecture fitness for scale, security, and cost control.",
+    "delivery": "assessment report",
+    "file": "03-cloud-architecture-due-diligence"
+  },
+  {
+    "id": "03-cloud-observability-audit",
+    "title": "Observability & Reliability Audit",
+    "service_line": "cloud-data",
+    "audience": "SRE lead",
+    "intent": "Diagnose observability coverage and reliability posture across the platform.",
+    "delivery": "audit report",
+    "file": "03-cloud-observability-audit"
+  },
+  {
+    "id": "03-cloud-security-hardening",
+    "title": "Cloud Security Hardening Playbook",
+    "service_line": "cloud-data",
+    "audience": "Security architect",
+    "intent": "Produce a prioritized security hardening plan with compliance alignment.",
+    "delivery": "hardening plan",
+    "file": "03-cloud-security-hardening"
+  },
+  {
+    "id": "12-learn-master-doc-filing",
+    "title": "Master Documentation Filing System",
+    "service_line": "learn",
+    "audience": "Documentation lead",
+    "intent": "Enforce a chronological filing system that keeps every deliverable traceable.",
+    "delivery": "filing system protocol",
+    "file": "12-learn-master-doc-filing"
+  },
+  {
+    "id": "12-learn-operator-onboarding",
+    "title": "Operator Onboarding Curriculum",
+    "service_line": "learn",
+    "audience": "Enablement lead",
+    "intent": "Build a focused onboarding curriculum for new operators or client teams.",
+    "delivery": "curriculum plan",
+    "file": "12-learn-operator-onboarding"
+  },
+  {
+    "id": "12-learn-prompt-retrospective",
+    "title": "Prompt Retrospective Workshop",
+    "service_line": "learn",
+    "audience": "Prompt engineering lead",
+    "intent": "Review and improve prompt performance across the library.",
+    "delivery": "workshop outline",
+    "file": "12-learn-prompt-retrospective"
+  },
+  {
+    "id": "15-ops-devops-system-analysis",
+    "title": "Operator-Grade System Analysis",
+    "service_line": "cloud-data",
+    "audience": "DevOps engineer",
+    "intent": "Produce the canonical operations playbook for a live system using Intent Solutions standards.",
+    "delivery": "system analysis report (10k-20k words)",
+    "file": "15-ops-devops-system-analysis"
+  },
+  {
+    "id": "15-ops-github-release-runbook",
+    "title": "Operator Release Runbook",
+    "service_line": "cloud-data",
+    "audience": "Release engineer",
+    "intent": "Prepare a production-ready GitHub release plan with audit-ready documentation.",
+    "delivery": "release runbook",
+    "file": "15-ops-github-release-runbook"
+  }
+]

@@ -1,192 +1,145 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Jeremy Longshore" />
-  <title>Prompts Intent Solutions</title>
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<table class="header">
-  <tr>
-    <td colspan="2" rowspan="2" class="width-auto">
-      <h1 class="title">Prompts Intent Solutions</h1>
-      <span class="subtitle">Professional prompt engineering toolkit</span>
-    </td>
-    <th>Version</th>
-    <td class="width-min">v1.0.1</td>
-  </tr>
-  <tr>
-    <th>Updated</th>
-    <td class="width-min"><time style="white-space: pre;">2025-10-02</time></td>
-  </tr>
-  <tr>
-    <th class="width-min">Author</th>
-    <td class="width-auto"><a href="https://github.com/jeremylongshore"><cite>Jeremy Longshore</cite></a></td>
-    <th class="width-min">License</th>
-    <td class="width-min"><a href="https://github.com/jeremylongshore/prompts-intent-solutions/blob/main/LICENSE">MIT</a></td>
-  </tr>
-</table>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intent Solutions Prompt Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <span class="badge">intent solutions · prompt library</span>
+        <h1>Operator-grade prompts for real production work.</h1>
+        <p>
+          Curated prompts that mirror our Private AI, AI Agents, Automation, and Cloud &amp; Data
+          engagements. Every asset is built for operators, audited for security, and ready for
+          reseller packaging.
+        </p>
+        <a class="cta" href="mailto:jeremy@intentsolutions.io">Start a project</a>
+      </div>
+    </header>
 
-<main>
-<section>
-<h2>Quick Start</h2>
-<table>
-  <tr>
-    <th>Role</th>
-    <th>Start Here</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>👩‍💻 Developer</td>
-    <td><a href="../prompts/development/">Development Prompts</a></td>
-    <td>Planning, setup, debugging, features, testing, security</td>
-  </tr>
-  <tr>
-    <td>💼 Business User</td>
-    <td><a href="../prompts/business/">Business Prompts</a></td>
-    <td>Marketing, finance, operations, customer success</td>
-  </tr>
-  <tr>
-    <td>🤖 AI Engineer</td>
-    <td><a href="../prompts/specialized/claude-agents/">Claude Code Agents</a></td>
-    <td>74 professional agent configurations</td>
-  </tr>
-</table>
-</section>
+    <main>
+      <section class="filters">
+        <div class="filters__header">
+          <h2>Explore by service line</h2>
+          <p>Select a domain to filter the library.</p>
+        </div>
+        <div class="filters__buttons" id="filters"></div>
+      </section>
 
-<section>
-<h2>Popular Prompts</h2>
-<table>
-  <tr>
-    <th>Prompt</th>
-    <th>Success Rate</th>
-    <th>Category</th>
-  </tr>
-  <tr>
-    <td><a href="../prompts/business/customer-success/CS-001-complaint-to-gold.md">Customer Complaint → Gold</a></td>
-    <td>73%</td>
-    <td>Customer Success</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/development/setup/SETUP-001-ai-assistant.md">AI Assistant Setup</a></td>
-    <td>95%</td>
-    <td>Development Setup</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/business/marketing/MARKET-001-linkedin-meeting-booker.md">LinkedIn Meeting Booker</a></td>
-    <td>89%</td>
-    <td>Marketing</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/business/finance/FINANCE-001-invoice-followup.md">Invoice Follow-up Automation</a></td>
-    <td>94%</td>
-    <td>Finance</td>
-  </tr>
-</table>
-</section>
+      <section class="grid" id="promptGrid" aria-live="polite"></section>
 
-<section>
-<h2>Browse by Category</h2>
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Count</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><a href="../prompts/development/planning/">Planning</a></td>
-    <td>8</td>
-    <td>System design, project planning, architecture</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/development/setup/">Setup</a></td>
-    <td>8</td>
-    <td>Environment configuration, tool setup</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/development/debugging/">Debugging</a></td>
-    <td>5</td>
-    <td>Error analysis, performance issues</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/business/marketing/">Marketing</a></td>
-    <td>5</td>
-    <td>LinkedIn outreach, email campaigns</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/business/finance/">Finance</a></td>
-    <td>4</td>
-    <td>Invoice automation, cash flow</td>
-  </tr>
-  <tr>
-    <td><a href="../prompts/specialized/claude-agents/">Claude Agents</a></td>
-    <td>74</td>
-    <td>Professional AI agent configurations</td>
-  </tr>
-</table>
-</section>
+      <section class="cta-panel">
+        <div>
+          <h3>Need a bespoke prompt system?</h3>
+          <p>
+            We build private prompt libraries, automation playbooks, and toolchains for operators,
+            resellers, and enterprise teams. Tell us about your stack and we’ll bring the prompts.
+          </p>
+        </div>
+        <a class="cta secondary" href="https://intentsolutions.io/#contact">Book a discovery call</a>
+      </section>
+    </main>
 
-<section>
-<h2>Credits & Acknowledgments</h2>
-<table>
-  <tr>
-    <th>Component</th>
-    <th>Source</th>
-    <th>License</th>
-  </tr>
-  <tr>
-    <td>Monospace Web Design</td>
-    <td><a href="https://github.com/owickstrom/the-monospace-web">Oskar Wickström</a></td>
-    <td>MIT</td>
-  </tr>
-  <tr>
-    <td>Claude Code Agents</td>
-    <td><a href="https://github.com/wshobson/agents">wshobson/agents</a></td>
-    <td>Apache 2.0</td>
-  </tr>
-  <tr>
-    <td>Prompt Templates</td>
-    <td><a href="https://github.com/jeremylongshore">Jeremy Longshore</a></td>
-    <td>MIT</td>
-  </tr>
-</table>
-</section>
+    <footer>
+      <nav>
+        <a href="https://intentsolutions.io" target="_blank" rel="noreferrer">IntentSolutions.io</a>
+        <a href="https://startaitools.com" target="_blank" rel="noreferrer">StartAITools.com</a>
+        <a href="https://github.com/jeremylongshore" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <p>© 2025 Intent Solutions. All rights reserved.</p>
+    </footer>
 
-<section>
-<h2>Repository Stats</h2>
-<table>
-  <tr>
-    <th>Metric</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>Total Prompts</td>
-    <td>150+</td>
-  </tr>
-  <tr>
-    <td>Categories</td>
-    <td>12</td>
-  </tr>
-  <tr>
-    <td>Agent Configs</td>
-    <td>74</td>
-  </tr>
-  <tr>
-    <td>Success Stories</td>
-    <td>25+</td>
-  </tr>
-</table>
-</section>
-</main>
+    <script type="module">
+      const serviceLabels = {
+        "cloud-data": "Cloud & Data",
+        automation: "Automation",
+        "ai-agents": "AI Agents",
+        "private-ai": "Private AI",
+        learn: "Learn",
+      };
 
-<footer>
-<p><small>
-  Built with ❤️ for the AI-assisted development community<br>
-  <a href="https://github.com/jeremylongshore/prompts-intent-solutions">View on GitHub</a>
-</small></p>
-</footer>
-</body>
+      const state = { filter: "all", prompts: [] };
+
+      const filtersEl = document.getElementById("filters");
+      const gridEl = document.getElementById("promptGrid");
+
+      const createButton = (id, label) => {
+        const btn = document.createElement("button");
+        btn.className = "filter";
+        btn.dataset.filter = id;
+        btn.textContent = label;
+        btn.addEventListener("click", () => {
+          state.filter = id;
+          document.querySelectorAll(".filter").forEach((b) => b.classList.remove("filter--active"));
+          btn.classList.add("filter--active");
+          renderGrid();
+        });
+        return btn;
+      };
+
+      const renderFilters = () => {
+        filtersEl.appendChild(createButton("all", "All prompts"));
+        Object.entries(serviceLabels).forEach(([id, label]) => {
+          filtersEl.appendChild(createButton(id, label));
+        });
+        filtersEl.querySelector("button").classList.add("filter--active");
+      };
+
+      const renderGrid = () => {
+        gridEl.innerHTML = "";
+        const prompts = state.prompts.filter((item) => {
+          return state.filter === "all" || item.service_line === state.filter;
+        });
+
+        if (!prompts.length) {
+          const empty = document.createElement("div");
+          empty.className = "empty";
+          empty.textContent =
+            "No prompts found for that service line yet. Reach out and we’ll build it with you.";
+          gridEl.appendChild(empty);
+          return;
+        }
+
+        prompts.forEach((prompt) => {
+          const card = document.createElement("article");
+          card.className = "card";
+          card.innerHTML = `
+            <span class="card__pill">${serviceLabels[prompt.service_line] ?? prompt.service_line}</span>
+            <h3>${prompt.title}</h3>
+            <p>${prompt.intent}</p>
+            <dl>
+              <div>
+                <dt>Audience</dt>
+                <dd>${prompt.audience}</dd>
+              </div>
+              <div>
+                <dt>Delivery</dt>
+                <dd>${prompt.delivery}</dd>
+              </div>
+            </dl>
+            <a class="card__link" href="https://github.com/jeremylongshore/prompts-intent-solutions/blob/main/prompts/${prompt.file}.md" target="_blank" rel="noreferrer">Open prompt →</a>
+          `;
+          gridEl.appendChild(card);
+        });
+      };
+
+      const load = async () => {
+        const res = await fetch("./data/prompts.json");
+        state.prompts = await res.json();
+        renderFilters();
+        renderGrid();
+      };
+
+      load();
+    </script>
+  </body>
 </html>

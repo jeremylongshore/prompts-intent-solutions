@@ -1,12 +1,17 @@
 ---
 name: master-file-naming-conventions
-description: Complete guide to file naming conventions - professional reference for directory excellence
+description: Reference guide for file naming conventions - explains kebab-case, camelCase, PascalCase, snake_case
 model: opus
-date: 2025-09-28
+date: 2025-10-05
 ---
 
 # Complete Guide to File Naming Conventions
-## A Professional Reference for Directory Excellence
+## Professional Reference for Directory Excellence
+
+**Note:** This is a REFERENCE document explaining naming conventions. For AI execution prompts to apply these standards, see:
+- `DIRECTORY-001-professional-directory-system-100525.md` - Apply directory standards
+- `DIRECTORY-002-llm-execution-prompt-092825.md` - Comprehensive directory audit
+- `MASTER-DIRECTORY-STANDARDS.md` - Universal standards single source of truth
 
 ---
 
@@ -452,4 +457,12 @@ Choose the right convention for each context, be consistent, and document your c
 **Remember**: The best naming convention is the one that's consistently applied throughout your project.
 
 ---
-*Updated: September 28, 2025*
+
+## VERSION HISTORY
+
+- **1.0.1** (2025-10-05) – Added reference note clarifying AI execution model separation
+- **1.0.0** (2025-09-28) – Initial naming conventions reference guide
+
+---
+
+*Complete Guide to File Naming Conventions – Reference for Professional Directory Excellence*

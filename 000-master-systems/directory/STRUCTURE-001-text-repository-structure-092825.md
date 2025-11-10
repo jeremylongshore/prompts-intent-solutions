@@ -1,12 +1,16 @@
 ---
 name: text-repository-structure
-description: Master structure for text-based repositories - optimized for prompts, documentation, and content repositories
+description: Reference guide for text-based repository structure - optimized for prompts, documentation, and content
 model: opus
-date: 2025-09-28
+date: 2025-10-05
 ---
 
 # Text-Based Repository Structure
-## Optimized for Prompts, Documentation, and Content Repositories
+## Reference Guide for Prompt and Content Repositories
+
+**Note:** This is a REFERENCE document explaining text repository organization. For AI execution prompts to create this structure, see:
+- `DIRECTORY-003-master-project-structure-092825.md` - Create project structure
+- `MASTER-DIRECTORY-STANDARDS.md` - Universal standards
 
 ---
 
@@ -415,46 +419,20 @@ Maintenance:
 
 ---
 
-## QUICK START FOR PROMPT REPO
+## APPLYING THIS STRUCTURE
 
-```bash
-#!/bin/bash
-# setup-prompt-repo.sh
+To create a text repository following this structure, use the AI execution prompt:
+- `DIRECTORY-003-master-project-structure-092825.md` - Creates complete directory structure
 
-# Create structure
-mkdir -p {00-templates,01-system-prompts,02-task-prompts,03-domain-prompts}
-mkdir -p {04-chain-prompts,05-examples,06-components,07-collections}
-mkdir -p {08-testing,09-research,99-archive}
-mkdir -p audit-reports
-
-# Create initial files
-echo "# Prompt Repository" > README.md
-echo "# Prompt Style Guide" > PROMPT-STYLE-GUIDE.md
-echo "# Prompt Index" > INDEX.md
-
-# Create first template
-cat > 00-templates/prompt-template.md << 'EOF'
-# [Prompt Name]
-
-## Metadata
-- **Version**: 1.0.0
-- **Created**: $(date +%Y-%m-%d)
-- **Category**: [Category]
-
-## Prompt
-```
-[Prompt text here]
-```
-
-## Example
-Input: [Example]
-Output: [Expected]
-EOF
-
-echo "✅ Prompt repository structure created!"
-```
-
-This structure makes your prompt repository as organized as a code repository, but optimized for text-based content!
+Or manually create the numbered directories and category folders shown in the structure above.
 
 ---
-*Updated: September 28, 2025*
+
+## VERSION HISTORY
+
+- **1.0.1** (2025-10-05) – Removed bash script, added reference note for AI execution model
+- **1.0.0** (2025-09-28) – Initial text repository structure guide
+
+---
+
+*Text-Based Repository Structure – Reference for Prompt and Content Organization*

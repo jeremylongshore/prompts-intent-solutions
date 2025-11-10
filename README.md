@@ -1,81 +1,73 @@
-# 🚀 Prompts Intent Solutions
+# Intent Solutions Prompt Library
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://jeremylongshore.github.io/prompts-intent-solutions/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Prompts: 150+](https://img.shields.io/badge/Prompts-150+-blue)](./prompts/)
-[![Agents: 74](https://img.shields.io/badge/Claude%20Agents-74-purple)](./prompts/specialized/claude-agents/)
 
-Professional prompt engineering toolkit with battle-tested templates for development and business operations.
+Operator-grade prompts for Intent Solutions engagements. Every asset mirrors our service lines—Private AI, AI Agents, Automation, Cloud & Data, and Learn—and is written for production operators, resellers, and execs who expect receipts.
 
-**🌐 [Browse the full catalog →](https://jeremylongshore.github.io/prompts-intent-solutions/)**
+**🌐 [Browse the live catalog](https://jeremylongshore.github.io/prompts-intent-solutions/)**  
+**📬 [Start a project](mailto:jeremy@intentsolutions.io)**
 
-## 🎯 Quick Start
+## Library Snapshot
 
-### By Role
-- **👩‍💻 Developers** → [Development Prompts](prompts/development/) - Planning, debugging, testing, security
-- **💼 Business Users** → [Business Prompts](prompts/business/) - Marketing, finance, operations
-- **🤖 AI Engineers** → [Claude Code Agents](prompts/specialized/claude-agents/) - 74 professional configurations
+| Service Line | Flagship Prompt | What it Delivers |
+|--------------|----------------|------------------|
+| Cloud & Data | [`15-ops-devops-system-analysis`](prompts/15-ops-devops-system-analysis.md) | The definitive operations guide for a platform hand-off. |
+| Cloud & Data | [`15-ops-github-release-runbook`](prompts/15-ops-github-release-runbook.md) | Release documentation, deployment plan, and communications pack. |
+| Cloud & Data | [`03-cloud-security-hardening`](prompts/03-cloud-security-hardening.md) | Prioritised hardening backlog mapped to compliance frameworks. |
+| Automation | [`01-auto-n8n-flow-upgrade`](prompts/01-auto-n8n-flow-upgrade.md) | Resilient n8n workflow blueprint ready for reseller packaging. |
+| Automation | [`01-auto-incident-escalation`](prompts/01-auto-incident-escalation.md) | Automation-assisted escalation matrix with communication scripts. |
+| AI Agents | [`01-agent-copilot-design`](prompts/01-agent-copilot-design.md) | Claude copilot design brief tied to operator workflows. |
+| AI Agents | [`01-agent-slash-command-draft`](prompts/01-agent-slash-command-draft.md) | Slash-command bundle aligned with this library’s standards. |
+| Private AI | [`01-ai-private-model-rollout`](prompts/01-ai-private-model-rollout.md) | Safe, observable rollout plan for private models on Vertex/Bedrock. |
+| Learn | [`12-learn-operator-onboarding`](prompts/12-learn-operator-onboarding.md) | Two-week enablement curriculum for new operator teams. |
+| Learn | [`12-learn-master-doc-filing`](prompts/12-learn-master-doc-filing.md) | Chronological documentation discipline for every deliverable. |
+| Learn | [`12-learn-prompt-retrospective`](prompts/12-learn-prompt-retrospective.md) | Workshop to measure, tune, and sunset prompts responsibly. |
 
-### Popular Quick Wins
-1. **[Customer Complaint → Gold](prompts/business/customer-success/CS-001-complaint-to-gold.md)** - 73% success rate
-2. **[Invoice Follow-up Automation](prompts/business/finance/FINANCE-001-invoice-followup-automation.md)** - 94% collection rate
-3. **[LinkedIn Meeting Booker](prompts/business/marketing/MARKET-001-linkedin-meeting-booker.md)** - 89% response rate
-4. **[AI Assistant Setup](prompts/development/setup/SETUP-001-ai-assistant.md)** - Complete beginner guide
+See the full index in [`prompts/README.md`](prompts/README.md) or explore via the GitHub Pages site above.
 
-## 📁 Main Categories
+## Front Matter Schema
 
-### [Development Prompts](prompts/development/)
-**For software teams and technical work**
-- **Planning** - System design, architecture, project roadmaps (8 prompts)
-- **Setup** - Environment config, tool initialization (8 prompts)
-- **Debugging** - Error analysis, performance issues (5 prompts)
-- **Features** - New functionality, enhancements (3 prompts)
-- **Testing** - Test strategies, QA processes (3 prompts)
-- **Security** - Security audits, threat analysis (4 prompts)
-- **Maintenance** - Code cleanup, refactoring (4 prompts)
+```yaml
+---
+id: unique-slug
+title: Human-readable name
+service_line: cloud-data | automation | ai-agents | private-ai | learn
+audience: primary reader
+intent: one-sentence job to be done
+last_reviewed: YYYY-MM-DD
+model_hint: claude-3-5-sonnet
+tone: descriptor
+delivery: expected deliverable format
+---
+```
 
-### [Business Prompts](prompts/business/)
-**For operations, marketing, and growth**
-- **Marketing** - LinkedIn outreach, email campaigns (5 prompts)
-- **Finance** - Invoice automation, cash flow (4 prompts)
-- **Operations** - Process docs, vendor negotiation (5 prompts)
-- **Customer Success** - Complaint resolution, support (6 prompts)
-- **People & Culture** - Hiring, performance reviews (5 prompts)
+## How to Use
+1. **Pick the prompt** that matches your engagement or slash command.
+2. **Fill in variables** like project name, stakeholders, or severity levels.
+3. **Feed into Claude** (or the approved model) and iterate with evidence.
+4. **Capture outputs** in `01-Docs/` using the [MASTER DIRECTORY STANDARDS](.directory-standards.md).
+5. **Keep numeric prefixes** (`01-`, `03-`, `12-`, `15-`) intact so sorting stays consistent across tooling.
+6. **Archive variants** to `99-Archive/legacy-prompts/` once superseded and note the change in an AAR.
 
-### [Specialized Prompts](prompts/specialized/)
-**For advanced users and specific domains**
-- **[Claude Code Agents](prompts/specialized/claude-agents/)** - 74 professional AI agent configurations
-- **Automation Systems** - Complex multi-step workflows
-- **Industry Solutions** - Healthcare, fintech, education (coming soon)
+## Contributing New Prompts
+1. Duplicate the schema above and align to the proper service line.
+2. Keep instructions operator-first; describe decisions, not shell commands.
+3. Reference real artefacts (file paths, dashboards, tickets) so outputs are verifiable.
+4. Update `prompts/README.md`, run `python tools/generate_prompt_catalog.py`, and add the card to the site if needed.
+5. Include before/after screenshots or summaries when opening a pull request.
 
-## 🚀 Usage
+## Directory Standards
 
-1. **Browse** the [web catalog](https://jeremylongshore.github.io/prompts-intent-solutions/) or repository
-2. **Copy** the prompt template you need
-3. **Customize** by replacing [PLACEHOLDERS] with your specifics
-4. **Paste** into Claude, ChatGPT, or your preferred AI assistant
+This repository follows [`MASTER DIRECTORY STANDARDS`](.directory-standards.md):
+- Documentation lives under `01-Docs/` with `NNN-CC-ABCD-description.ext` naming.
+- Prompt library is flat under `prompts/` with kebab-case file names.
+- Superseded assets move to `99-Archive/legacy-prompts/` with an associated after-action report.
 
-## 📊 Proven Results
+## License
 
-These aren't theoretical templates - they're battle-tested with real metrics:
-
-| Prompt | Success Rate | Business Impact |
-|--------|--------------|-----------------|
-| Customer Complaint → Gold | 73% | $12K saved per prevented churn |
-| Invoice Follow-up | 94% | $15K recovered in first month |
-| LinkedIn Meeting Booker | 89% | Books $40K+ deals from cold outreach |
-| Bug Debugging System | 95% | 3x faster issue resolution |
-
-## 🤝 Credits & Acknowledgments
-
-- **Monospace Web Design** - [Oskar Wickström](https://github.com/owickstrom/the-monospace-web) (MIT License)
-- **Claude Code Agents** - [wshobson/agents](https://github.com/wshobson/agents) (Apache 2.0 License)
-- **Prompt Templates** - [Jeremy Longshore](https://github.com/jeremylongshore) (MIT License)
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
+MIT License — see [`LICENSE`](LICENSE).
 
 ---
 
-**Built for the AI-assisted development community** 🤖❤️
+**Intent Solutions** · Operator-first AI systems · [intentsolutions.io](https://intentsolutions.io) · [startaitools.com](https://startaitools.com)

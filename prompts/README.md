@@ -1,54 +1,56 @@
-# Prompt Library
+---
+title: Intent Solutions Prompt Library
+generated: 2025-10-16
+---
 
-Navigate prompts by category and purpose.
+# Intent Solutions Prompt Library
 
-## Development Prompts
+Operator-grade prompts curated for Intent Solutions engagements. Each asset aligns with our service lines (Private AI, AI Agents, Automation, Cloud & Data, Learn) and follows the same front-matter schema.
 
-**For software developers and technical teams**
+| ID | Title | Service Line | Primary Use |
+|----|-------|--------------|-------------|
+| `15-ops-devops-system-analysis` | Operator-Grade System Analysis | Cloud & Data | Build the definitive operations guide for a live platform. |
+| `15-ops-github-release-runbook` | Operator Release Runbook | Cloud & Data | Prepare audit-ready GitHub release documentation and comms. |
+| `03-cloud-architecture-due-diligence` | Cloud Architecture Due Diligence | Cloud & Data | Evaluate infrastructure fitness for scale, security, cost. |
+| `03-cloud-observability-audit` | Observability & Reliability Audit | Cloud & Data | Diagnose telemetry coverage and incident readiness. |
+| `03-cloud-security-hardening` | Cloud Security Hardening Playbook | Cloud & Data | Produce prioritized hardening plan with compliance mapping. |
+| `01-auto-n8n-flow-upgrade` | n8n Workflow Resilience Upgrade | Automation | Refactor automations for reliability and reseller packaging. |
+| `01-auto-incident-escalation` | Automation-Assisted Incident Escalation | Automation | Design blended human/automation escalation workflow. |
+| `01-agent-copilot-design` | Operator Copilot Design Workshop | AI Agents | Blueprint a Claude-based copilot tailored to operator workflows. |
+| `01-agent-slash-command-draft` | Slash Command Prompt Drafting | AI Agents | Create reusable slash-command prompts tied to this library. |
+| `01-ai-private-model-rollout` | Private Model Rollout Plan | Private AI | Launch private models with safety, observability, and training. |
+| `12-learn-operator-onboarding` | Operator Onboarding Curriculum | Learn | Build a two-week enablement plan for new operators. |
+| `12-learn-master-doc-filing` | Master Documentation Filing System | Learn | Maintain sequential documentation discipline across engagements. |
+| `12-learn-prompt-retrospective` | Prompt Retrospective Workshop | Learn | Run continuous improvement workshop for the library. |
 
-- [Planning](development/planning/) - System design, project planning, architecture (8 prompts)
-- [Setup](development/setup/) - Environment configuration, tool setup (8 prompts)
-- [Debugging](development/debugging/) - Error analysis, performance issues (5 prompts)
-- [Features](development/features/) - New functionality, improvements (3 prompts)
-- [Testing](development/testing/) - Test strategies, QA processes (3 prompts)
-- [Security](development/security/) - Security audits, threat analysis (4 prompts)
-- [Maintenance](development/maintenance/) - Code cleanup, refactoring (6 prompts)
+## Front Matter Schema
 
-## Business Prompts
+```yaml
+---
+id: unique-slug
+title: Human-readable name
+service_line: cloud-data | automation | ai-agents | private-ai | learn
+audience: primary reader
+intent: one-sentence job to be done
+last_reviewed: YYYY-MM-DD
+model_hint: claude-3-5-sonnet
+tone: descriptor
+delivery: expected deliverable format
+---
+```
 
-**For operations, marketing, and growth**
+## Usage Guidelines
+- Prompts assume operator-first tone, evidence-backed outputs, and Vertex-first security commitments.
+- Remove or adapt sections that do not match your project, but keep the structure to maintain quality.
+- Update `last_reviewed` whenever you refresh facts, metrics, or links.
+- Archive superseded prompts under `99-Archive/legacy-prompts/` with an AAR note.
+- Maintain the alphabetical index prefix (`01-`, `03-`, `12-`, etc.) so files stay ordered across tools.
 
-- [Marketing](business/marketing/) - LinkedIn outreach, email campaigns (5 prompts)
-- [Finance](business/finance/) - Invoice automation, cash flow (4 prompts)
-- [Operations](business/operations/) - Process documentation, vendor negotiation (5 prompts)
-- [Customer Success](business/customer-success/) - Complaint resolution, support responses (7 prompts)
-- [People & Culture](business/people-culture/) - Hiring optimization, performance reviews (5 prompts)
+## Contributing
+1. Duplicate the template from this README.
+2. Align content with one of the service lines.
+3. Ensure no shell commands are embedded—describe workflows instead.
+4. Add the prompt to the table above and update GitHub Pages data (see `/site` once generated).
+5. Run markdown linting and submit PR with before/after summary plus screenshots of rendered prompt if relevant.
 
-## Specialized Prompts
-
-**For advanced users and specific use cases**
-
-- [Claude Code Agents](specialized/claude-agents/) - 74 professional AI agent configurations
-- [Automation Systems](specialized/automation/) - Complex multi-step workflows
-- [Industry Solutions](specialized/industry/) - Healthcare, fintech, education (coming soon)
-
-## Quick Access
-
-### Most Popular
-1. **[Customer Complaint → Gold](business/customer-success/CS-001-complaint-to-gold.md)** - 73% success rate
-2. **[AI Assistant Setup](development/setup/SETUP-001-ai-assistant.md)** - Complete beginner guide
-3. **[LinkedIn Meeting Booker](business/marketing/MARKET-001-linkedin-meeting-booker.md)** - 89% response rate
-
-### Quick Wins
-- **[Invoice Follow-up Automation](business/finance/FINANCE-001-invoice-followup-automation.md)** - 94% collection rate
-- **[Bug Debugging System](development/debugging/DEBUG-001-bug-debugging.md)** - Systematic approach
-- **[Filing System](development/planning/PLAN-001-filing-system.md)** - Organize any project
-
-## How to Use
-
-1. **Browse by category** - Find prompts for your domain
-2. **Copy template** - Use the raw markdown content
-3. **Customize** - Replace [PLACEHOLDERS] with your specifics
-4. **Run with AI** - Paste into Claude, ChatGPT, or your preferred assistant
-
-All prompts follow the pattern: `CATEGORY-###-description.md`
+Questions? Reach out via `jeremy@intentsolutions.io` or open an issue.*** End Patch

@@ -1,16 +1,53 @@
 ---
 name: master-project-directory-structure
-description: The Universal Standard for All Projects - definitive directory structure for Fortune 500-level organization
+description: AI execution prompt to create professional project structure in any repository
 model: opus
-date: 2025-09-28
+date: 2025-10-05
 ---
 
-# Master Project Directory Structure™
-## The Universal Standard for All Projects
+# Master Project Directory Structure
+## AI Execution Prompt for Professional Project Setup
 
 ---
 
-## DEFINITIVE PROJECT STRUCTURE
+## INSTRUCTIONS FOR CLAUDE
+
+When the user asks you to create or apply the master project structure, follow this protocol to build a professional, scalable directory system.
+
+### Your Mission
+
+Transform any repository into a professionally structured project by:
+1. Creating the complete standard directory tree
+2. Setting up essential files and templates
+3. Validating structure compliance
+4. Reporting results
+
+**Bottom line:** Create a structure so organized that anyone can navigate it instantly and understand where everything belongs.
+
+---
+
+## STEP 1: ANALYZE CURRENT STATE
+
+Execute:
+```bash
+pwd  # Show current directory
+ls -la  # List all files and folders
+find . -type d -maxdepth 2  # Show directory structure
+```
+
+Report findings:
+```
+📊 CURRENT STATE
+
+Directory: /path/to/project
+Existing directories: X
+Existing files: Y
+Missing structure: [list key missing directories]
+```
+
+---
+
+## STEP 2: CREATE STANDARD DIRECTORY STRUCTURE
 
 Every project MUST follow this EXACT structure:
 
@@ -150,6 +187,173 @@ Every project MUST follow this EXACT structure:
 
 ---
 
+## STEP 3: CREATE CORE DIRECTORIES
+
+Execute these mkdir commands:
+```bash
+# GitHub integrations
+mkdir -p .github/workflows .github/ISSUE_TEMPLATE .github/scripts/{audit,chore,release}
+
+# Claude documentation
+mkdir -p claudes-docs/{reports,audits,analysis,plans,tasks,logs,misc}
+
+# Numbered project directories
+mkdir -p 01-Docs/{architecture,api,guides,meetings}
+mkdir -p 02-Src/{core,features,shared,vendor}
+mkdir -p 03-Tests/{unit,integration,e2e,fixtures}
+mkdir -p 04-Assets/{images,data,configs}
+mkdir -p 05-Scripts/{build,deploy,maintenance}
+mkdir -p 06-Infrastructure/{docker,kubernetes,terraform}
+mkdir -p 07-Releases/{current,archive}
+mkdir -p 99-Archive/{deprecated,legacy}
+```
+
+Report: "✅ Standard directory structure created"
+
+---
+
+## STEP 4: CREATE ESSENTIAL ROOT FILES
+
+Execute:
+```bash
+# Create missing root files
+[ ! -f "README.md" ] && touch README.md
+[ ! -f "CLAUDE.md" ] && touch CLAUDE.md
+[ ! -f "ARCHITECTURE.md" ] && touch ARCHITECTURE.md
+[ ! -f "CONTRIBUTING.md" ] && touch CONTRIBUTING.md
+[ ! -f "CHANGELOG.md" ] && touch CHANGELOG.md
+[ ! -f "SECURITY.md" ] && touch SECURITY.md
+[ ! -f ".gitignore" ] && touch .gitignore
+[ ! -f ".env.example" ] && touch .env.example
+```
+
+Report: "✅ Essential root files created"
+
+---
+
+## STEP 5: UPDATE README.md
+
+If README.md is empty or missing project structure section, add:
+
+```markdown
+## Project Structure
+
+This project follows the Master Project Directory Structure for professional organization:
+
+- `claudes-docs/` - Claude-created documentation and reports
+- `01-Docs/` - Project documentation and guides
+- `02-Src/` - Source code organized by feature
+- `03-Tests/` - Test suites (unit, integration, e2e)
+- `04-Assets/` - Static assets and configurations
+- `05-Scripts/` - Automation and deployment scripts
+- `06-Infrastructure/` - Docker, Kubernetes, Terraform
+- `07-Releases/` - Current and archived releases
+- `99-Archive/` - Deprecated and legacy code
+
+See `.directory-standards.md` for complete filing system.
+```
+
+---
+
+## STEP 6: UPDATE CLAUDE.md
+
+If CLAUDE.md is empty or missing structure section, add:
+
+```markdown
+## Directory Structure
+
+This project uses the Master Project Directory Structure:
+
+- All documentation goes in `01-Docs/`
+- All source code in `02-Src/` organized by feature
+- All tests in `03-Tests/` by type
+- Claude-generated docs go in `claudes-docs/` with proper categorization
+- File naming: kebab-case for files, PascalCase for main directories
+
+See `.directory-standards.md` for complete standards.
+```
+
+---
+
+## STEP 7: UPDATE .gitignore
+
+Ensure .gitignore includes:
+
+```
+node_modules/
+*.log
+.env
+.DS_Store
+claudes-docs/
+dist/
+build/
+*.tmp
+*.cache
+.vscode/
+.idea/
+```
+
+---
+
+## STEP 8: VALIDATE STRUCTURE
+
+Execute validation checks:
+```bash
+# Check all required directories exist
+for dir in claudes-docs 01-Docs 02-Src 03-Tests 04-Assets 05-Scripts 06-Infrastructure 07-Releases 99-Archive; do
+  [ -d "$dir" ] && echo "✅ $dir" || echo "❌ Missing: $dir"
+done
+
+# Verify root files exist
+for file in README.md CLAUDE.md .gitignore; do
+  [ -f "$file" ] && echo "✅ $file" || echo "❌ Missing: $file"
+done
+
+# Count directories
+echo "Total directories: $(find . -type d | wc -l)"
+```
+
+Report compliance status.
+
+---
+
+## STEP 9: FINAL REPORT
+
+Generate summary:
+
+```
+🎉 MASTER PROJECT STRUCTURE COMPLETE
+
+📊 RESULTS:
+- Total directories created: X
+- Root files created: Y
+- Structure compliance: [FULL/PARTIAL]
+
+📁 STRUCTURE:
+[PROJECT-ROOT]/
+├── claudes-docs/ ✅
+├── 01-Docs/ ✅
+├── 02-Src/ ✅
+├── 03-Tests/ ✅
+├── 04-Assets/ ✅
+├── 05-Scripts/ ✅
+├── 06-Infrastructure/ ✅
+├── 07-Releases/ ✅
+├── 99-Archive/ ✅
+├── README.md ✅
+├── CLAUDE.md ✅
+└── .gitignore ✅
+
+🎯 NEXT STEPS:
+1. Review README.md and customize project description
+2. Add specific build/test commands to documentation
+3. Commit structure: git add . && git commit -m "Initialize master project structure"
+
+Your project now has professional-grade organization! 🚀
+```
+
+---
+
 ## DIRECTORY PURPOSE DEFINITIONS
 
 ### Critical Top-Level Directories
@@ -238,145 +442,94 @@ task add project:myapp-102824 +REPORTS -- "Generate: 0001-AUDIT-102824-INITIAL-S
 
 ---
 
-## WORKFLOW EXECUTION ORDER
+## REFERENCE: DIRECTORY PURPOSE DEFINITIONS
 
-### 1. Directory Excellence (First)
-```bash
-# Clean up file system
-./run-directory-audit.sh      # Analyze structure
-./run-directory-chore.sh      # Fix naming/organization
-./run-directory-release.sh    # Validate excellence
-```
+### Core Directories
 
-### 2. GitHub Repository Audit (Second)
-```bash
-# Enhance repository
-./.github/scripts/audit/run-complete-audit.sh     # Find issues
-./.github/scripts/chore/run-complete-chore.sh     # Fix issues
-./.github/scripts/release/run-complete-release.sh # Deploy fixes
-```
+**`claudes-docs/`** - Claude-created documentation
+- `reports/` - After-action reports, summaries
+- `audits/` - Audit and review files
+- `analysis/` - Analysis and diagnostic docs
+- `plans/` - PRDs, planning documents
+- `tasks/` - Task exports from TaskWarrior
+- `logs/` - Log files and session records
+- `misc/` - Everything else
 
-### 3. Continuous Excellence
-```bash
-# Monthly maintenance
-task project:excellence recur:monthly -- "Run excellence pipeline"
-```
+**`01-Docs/`** - Project documentation
+- `architecture/` - System design, diagrams, ADRs
+- `api/` - API specs, OpenAPI/Swagger
+- `guides/` - User and developer guides
+- `meetings/` - Meeting notes and records
 
----
+**`02-Src/`** - Source code
+- `core/` - Core business logic
+- `features/` - Feature modules
+- `shared/` - Shared utilities
+- `vendor/` - Third-party code
 
-## INITIALIZATION COMMANDS
+**`03-Tests/`** - Test suites
+- `unit/` - Unit tests
+- `integration/` - Integration tests
+- `e2e/` - End-to-end tests
+- `fixtures/` - Test data
 
-### New Project Setup
-```bash
-#!/bin/bash
-# setup-project-structure.sh
+**`04-Assets/`** - Static assets
+- `images/` - Icons, screenshots, branding
+- `data/` - Sample data, reference data
+- `configs/` - Environment configurations
 
-PROJECT_NAME="$1"
-DATE=$(date +%m%d%y)
+**`05-Scripts/`** - Automation
+- `build/` - Build scripts
+- `deploy/` - Deployment scripts
+- `maintenance/` - Maintenance and cleanup
 
-echo "Initializing Master Structure for: $PROJECT_NAME"
+**`06-Infrastructure/`** - Infrastructure as Code
+- `docker/` - Dockerfiles, docker-compose
+- `kubernetes/` - K8s deployments, services
+- `terraform/` - Terraform definitions
 
-# Create all directories
-mkdir -p {audit-reports,deployment-docs,.github/{scripts/{audit,chore,release},workflows}}
-mkdir -p {01-docs/{architecture,api,guides,meetings},02-src/{core,features,shared,vendor}}
-mkdir -p {03-tests/{unit,integration,e2e,fixtures},04-assets/{images,data,configs}}
-mkdir -p {05-scripts/{build,deploy,maintenance},06-infrastructure/{docker,kubernetes,terraform}}
-mkdir -p {07-releases/{current,archive},99-archive/{deprecated,legacy}}
+**`07-Releases/`** - Release artifacts
+- `current/` - Current production version
+- `archive/` - Historical releases
 
-# Create essential files
-touch README.md ARCHITECTURE.md CONTRIBUTING.md CHANGELOG.md LICENSE
-touch SECURITY.md ROADMAP.md GOVERNANCE.md .gitignore .env.example
-
-# Create first audit report
-cat > audit-reports/0001-AUDIT-${DATE}-STRUCTURE-INITIALIZED.md << EOF
-# 0001-AUDIT-${DATE}-STRUCTURE-INITIALIZED.md
-
-**Date**: $(date +%Y-%m-%d)
-**Phase**: AUDIT
-**Status**: ✅ COMPLETE
-
-## Description
-Master directory structure initialized for $PROJECT_NAME
-
-## Structure Created
-- All numbered directories (01-docs through 99-archive)
-- audit-reports/ for LLM output
-- deployment-docs/ for project documentation
-- .github/scripts/ for pipeline automation
-
----
-**Created**: $(date -Iseconds)
-EOF
-
-# Initialize TaskWarrior
-task add project:${PROJECT_NAME}-${DATE} +MASTER priority:H -- "Initialize $PROJECT_NAME excellence"
-
-echo "✅ Master structure created!"
-echo "📁 Directories: $(find . -type d | wc -l)"
-echo "📄 Files: $(find . -type f | wc -l)"
-echo "📊 First report: audit-reports/0001-AUDIT-${DATE}-STRUCTURE-INITIALIZED.md"
-```
-
----
-
-## VALIDATION CHECKLIST
-
-### Directory Structure Compliance
-```bash
-# Check all required directories exist
-for dir in audit-reports deployment-docs 01-docs 02-src 03-tests 04-assets 05-scripts 06-infrastructure 07-releases 99-archive; do
-  [ -d "$dir" ] && echo "✅ $dir" || echo "❌ Missing: $dir"
-done
-
-# Verify no files in root (except allowed)
-ls -la | grep -v "^d" | grep -v "README\|LICENSE\|CONTRIBUTING\|CHANGELOG\|ARCHITECTURE\|SECURITY\|GOVERNANCE\|ROADMAP\|\.git\|\.env"
-
-# Check report numbering sequence
-ls audit-reports/*.md | sed 's/.*\/\([0-9]\{4\}\).*/\1/' | sort -n | awk '$1!=p+1{print "Gap at: "p+1}{p=$1}'
-```
+**`99-Archive/`** - Archived materials
+- `deprecated/` - Deprecated but preserved
+- `legacy/` - Legacy reference code
 
 ---
 
 ## BENEFITS OF THIS SYSTEM
 
 1. **Universal Consistency**: Every project identical structure
-2. **LLM-Friendly**: Clear location for all generated reports
-3. **Audit Trail**: Complete chronological history
-4. **GitHub Integration**: Pipeline scripts organized by phase
-5. **TaskWarrior Tracking**: Everything tracked and measurable
-6. **Scalable**: Works for 10 files or 10,000 files
-7. **Professional**: Fortune 500-level organization
-8. **No Confusion**: Everyone knows where everything goes
-
----
-
-## THE POWER OF THIS STRUCTURE
-
-When someone opens ANY of your projects, they see:
-- Identical, professional organization
-- Clear separation of concerns
-- Obvious location for everything
-- Complete audit trail
-- Professional documentation
-- Enterprise-grade structure
-
-**This isn't just organization—it's operational excellence that scales infinitely.**
+2. **AI-Friendly**: Clear location for all generated reports
+3. **Immediate Navigation**: Anyone finds files in seconds
+4. **Scalable**: Works for 10 files or 10,000 files
+5. **Professional**: Clean, organized, maintainable
+6. **No Confusion**: Everyone knows where everything goes
 
 ---
 
 ## QUICK REFERENCE
 
-| What | Where | Format |
-|------|-------|--------|
-| LLM Reports | `/audit-reports/` | ####-PHASE-MMDDYY-DESC.md |
-| Project Docs | `/deployment-docs/` | ####-PHASE-MMDDYY-DESC.md |
-| Pipeline Scripts | `/.github/scripts/[phase]/` | verb-noun.sh |
-| Source Code | `/02-src/` | Standard language conventions |
-| Tests | `/03-tests/` | test-[feature].js |
-| Documentation | `/01-docs/` | kebab-case.md |
-| Archives | `/99-archive/` | cleanup-YYYY-MM-DD/ |
-
-**This structure is your competitive advantage. Implement it everywhere.**
+| What | Where |
+|------|-------|
+| Claude Docs | `claudes-docs/` |
+| Documentation | `01-Docs/` |
+| Source Code | `02-Src/` |
+| Tests | `03-Tests/` |
+| Assets | `04-Assets/` |
+| Scripts | `05-Scripts/` |
+| Infrastructure | `06-Infrastructure/` |
+| Releases | `07-Releases/` |
+| Archive | `99-Archive/` |
 
 ---
-*Updated: September 28, 2025*
+
+## VERSION HISTORY
+
+- **1.0.7** (2025-10-05) – Converted to AI execution model, removed bash scripts
+- **1.0.0** (2025-09-28) – Initial master structure definition
+
+---
+
+*Master Project Directory Structure – Professional organization for any project*
