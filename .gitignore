@@ -31,3 +31,7 @@ vendor/
 scratch/
 personal/
 drafts/
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db
