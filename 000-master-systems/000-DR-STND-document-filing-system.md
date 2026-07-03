@@ -7,7 +7,7 @@
 **Purpose:** Universal, deterministic naming + filing standard for project docs with canonical cross-repo "000-*" standards series
 **Status:** Production Standard (v3-compatible, v4.0-compatible, v4.2-compatible, v4.3-compatible)
 **Last Updated:** 2026-06-19
-**Changelog:** v4.4 adds **disciplined numbered nesting at scale** (flat stays the default; subfolders are coded `NNN-CC-cluster-name/`; `NNN` is one global chronological sequence across the whole tree). **Non-breaking** — flat dirs stay valid. v4.3 migrated the 6767 prefix to 000-* for canonical standards. v4.4 also **drops the never-used byte-identical / shasum cross-repo sync rule** in favor of a single canonical copy (this skill) that other repos mirror by reference.
+**Changelog:** v4.4 adds **disciplined numbered nesting at scale** (flat stays the default; subfolders are coded `NNN-CC-cluster-name/`; `NNN` is one global chronological sequence across the whole tree). **Non-breaking** — flat dirs stay valid. v4.3 migrated the 6767 prefix to 000-* for canonical standards. v4.4 also **drops the never-used byte-identical / shasum cross-repo sync rule** in favor of a single canonical copy (this skill) that other repos mirror by reference, and **defines what a nested folder must be** — a real cluster in one of a fixed set of archetypes (§3.1.2), never a category / doc-type / lifecycle bucket.
 **Applies To:** All projects in `/home/jeremy/000-projects/` and all canonical standards in the 000-* series
 
 ---
@@ -26,7 +26,8 @@
 7) **Flat by default; disciplined numbered nesting at scale (v4.4).** Nest **one level** into
    `NNN-CC-cluster-name/` folders **only** when `000-docs/` exceeds ~50 files **and** a cluster has
    ~8+ related docs. Folders are coded just like files. Canonical `000-*` standards **always stay at
-   the flat root**, never nested.
+   the flat root**, never nested. A nested folder must be a **real cluster** in one of the defined
+   archetypes (§3.1.2).
 8) **`NNN` is one global chronological sequence** across the flat root **and** every subfolder —
    never per-folder, never reused. **Next number = recursive scan of the whole tree**
    (`find 000-docs -type f`), not `ls` of one directory.
@@ -183,6 +184,41 @@ they are the global filing sequence, interleaved with everything else by date. T
 - **Examples:** `040-UC-kobiton/`, `055-OD-vps-migration/`, `070-RA-q3-analysis/`.
 - **Banned:** uncoded/ad-hoc folders (`docs/`, `misc/`, `archive/`, `01-Docs/`); folders within
   folders; per-folder `NNN` restarts; nesting a `000-*` canonical standard.
+
+### 3.1.2) What a nested folder MUST be — cluster archetypes
+
+A nested folder is a **cluster**: docs bound by **one subject you can name in a single sentence.**
+The `cluster-name` is that subject; the `CC` is the category most of its docs share. If you cannot
+say *"everything in here is about ___"* in one sentence, it is **not** a cluster — keep those docs
+flat.
+
+**A valid cluster is exactly one of these archetypes:**
+
+| Archetype | Bound by | Typical `CC` | Example |
+|---|---|---|---|
+| **Engagement** | one client / partner | `UC` | `040-UC-kobiton/` |
+| **Initiative** | one bounded effort / migration / program | `OD`, `PP` | `055-OD-vps-migration/` |
+| **Subsystem** | one component / part of the system | `AT`, `DC` | `060-AT-brain-stack/` |
+| **Report series** | one recurring cadence | `RA`, `LS` | `070-RA-quarterly-reviews/` |
+| **Research thread** | one line of inquiry | `RL` | `066-RL-eval-standards/` |
+
+**Cohesion rules (all four required):**
+1. **One-sentence subject** — a single nameable binding subject.
+2. **Category-dominant** — ≥ ~70% of the files share the folder's `CC`; mixed-category grab-bags are
+   not clusters.
+3. **Earns the threshold** — ~8+ related docs (below that, stay flat).
+4. **Named for the subject, not the category** — `kobiton`, `vps-migration`; never `customer`, `ops`.
+
+**A nested folder must NEVER be** (each is a filename/frontmatter concern, not a folder):
+- a **category** bucket — `OD/`, `UC/` (the `CC` already lives on the file)
+- a **doc-type** bucket — `audits/`, `plans/`, `aars/` (the `ABCD` already lives on the file)
+- a **lifecycle** bucket — `archive/`, `wip/`, `draft/`, `done/` (status is a marker on the file, not a folder)
+- a **catch-all** — `misc/`, `other/`, `stuff/`
+
+**Lifecycle:** a cluster folder is **permanent** once opened (its `NNN` is a fixed point in the
+timeline). When an engagement or initiative ends, the folder **stays** — never move it into an
+`archive/`. If a cluster outgrows ~30–40 docs it is usually two subjects — **split by subject** into
+two clusters (each a new `NNN`), never by adding a second level.
 
 ---
 
