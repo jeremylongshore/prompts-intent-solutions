@@ -3,6 +3,8 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://jeremylongshore.github.io/prompts-intent-solutions/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U5S225PTME)
+
 Operator-grade prompts for Intent Solutions engagements. Every asset mirrors our service lines—Private AI, AI Agents, Automation, Cloud & Data, and Learn—and is written for production operators, resellers, and execs who expect receipts.
 
 **🌐 [Browse the live catalog](https://jeremylongshore.github.io/prompts-intent-solutions/)**  
