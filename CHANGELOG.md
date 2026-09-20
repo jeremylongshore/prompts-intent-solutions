@@ -1,3 +1,32 @@
+# Release v2.0.0
+
+**Release Date**: 2026-09-20
+
+## Changes since v1.0.1
+
+- chore: release v2.0.0 [skip ci] (61d05dc)
+- fix(ci): make the release workflow parse and make template validation check the library that exists (#9) (584599b)
+- ci(deps): move GitHub actions off the node20 runtime before its removal (#7) (db3d1a2)
+- chore(funding): add Ko-fi alongside the existing funding sources (576d584)
+- docs(readme): add the Ko-fi support badge (c8ea004)
+- docs(doc-filing): add cluster-archetype standard (§3.1.2) — what a nested folder must be (d3d4598)
+- docs(doc-filing): sync master to canonical v4.4, drop byte-identical rule, archive v3.0 (4af3cfb)
+- bd init: initialize beads issue tracking (f54d525)
+- chore: update FUNDING.yml with GitHub Sponsors + Buy Me a Coffee (eb25544)
+- chore: update FUNDING.yml with GitHub Sponsors + Buy Me a Coffee (223c318)
+- chore: add GitHub Sponsors funding button (b8c503d)
+- docs: migrate document filing standard from 6767 to 000-* prefix (v4.3) (75bca9e)
+- docs: add Beads upgrade note (whats-new + hooks) (f07147d)
+- chore: add Beads (bd) workflow + ignore beads source clone (380b2ab)
+- refactor: rebuild prompt library for operator-first experience (683b422)
+- chore: enable automatic releases on every push (d15365f)
+- chore: add global release workflow (7e9b21e)
+- ci(deps): bump actions/checkout from 4 to 5 (#6) (b6c9040)
+- ci(deps): bump DavidAnson/markdownlint-cli2-action from 13 to 20 (#5) (ffab31f)
+- ci(deps): bump actions/setup-python from 4 to 6 (#4) (d9bf73d)
+
+---
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
