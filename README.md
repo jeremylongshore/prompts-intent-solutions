@@ -45,6 +45,7 @@ delivery: expected deliverable format
 ```
 
 ## How to Use
+
 1. **Pick the prompt** that matches your engagement or slash command.
 2. **Fill in variables** like project name, stakeholders, or severity levels.
 3. **Feed into Claude** (or the approved model) and iterate with evidence.
@@ -53,6 +54,7 @@ delivery: expected deliverable format
 6. **Archive variants** to `99-Archive/legacy-prompts/` once superseded and note the change in an AAR.
 
 ## Contributing New Prompts
+
 1. Duplicate the schema above and align to the proper service line.
 2. Keep instructions operator-first; describe decisions, not shell commands.
 3. Reference real artefacts (file paths, dashboards, tickets) so outputs are verifiable.
@@ -62,6 +64,7 @@ delivery: expected deliverable format
 ## Directory Standards
 
 This repository follows [`MASTER DIRECTORY STANDARDS`](.directory-standards.md):
+
 - Documentation lives under `01-Docs/` with `NNN-CC-ABCD-description.ext` naming.
 - Prompt library is flat under `prompts/` with kebab-case file names.
 - Superseded assets move to `99-Archive/legacy-prompts/` with an associated after-action report.

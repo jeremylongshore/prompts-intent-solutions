@@ -35,18 +35,25 @@ jobs:
     - name: Check for duplicates
       run: python tools/check_duplicates.py
 
+    - name: Prove the validators reject a bad library
+      run: python tools/test_validators.py
+
     - name: Validate markdown syntax
       uses: DavidAnson/markdownlint-cli2-action@v23
       with:
-        globs: '**/*.md'
+        # The maintained library. Archived and vendored markdown is not held to the lint.
+        globs: |
+          prompts/**/*.md
+          README.md
+          CHANGELOG.md
         config: '.markdownlint.json'
 
     - name: Generate validation report
       run: |
-        echo "## Template Validation Report" >> $GITHUB_STEP_SUMMARY
-        echo "✅ All validation checks passed successfully" >> $GITHUB_STEP_SUMMARY
-        echo "- Filename conventions: ✅" >> $GITHUB_STEP_SUMMARY
-        echo "- YAML frontmatter: ✅" >> $GITHUB_STEP_SUMMARY
-        echo "- Repository structure: ✅" >> $GITHUB_STEP_SUMMARY
-        echo "- Duplicate detection: ✅" >> $GITHUB_STEP_SUMMARY
-        echo "- Markdown syntax: ✅" >> $GITHUB_STEP_SUMMARY
+        echo "## Template Validation Report" >> "$GITHUB_STEP_SUMMARY"
+        echo "✅ All validation checks passed successfully" >> "$GITHUB_STEP_SUMMARY"
+        echo "- Filename conventions: ✅" >> "$GITHUB_STEP_SUMMARY"
+        echo "- YAML frontmatter: ✅" >> "$GITHUB_STEP_SUMMARY"
+        echo "- Repository structure: ✅" >> "$GITHUB_STEP_SUMMARY"
+        echo "- Duplicate detection: ✅" >> "$GITHUB_STEP_SUMMARY"
+        echo "- Markdown syntax: ✅" >> "$GITHUB_STEP_SUMMARY"

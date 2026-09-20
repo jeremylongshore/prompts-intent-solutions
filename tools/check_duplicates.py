@@ -1,75 +1,40 @@
 #!/usr/bin/env python3
-"""
-Check for duplicate numbering within categories.
-"""
-
-import os
+"""No two prompts share an id, and the index in prompts/README.md lists exactly
+the prompts that exist."""
 import re
 import sys
-from collections import defaultdict
+from collections import Counter
+from pathlib import Path
 
-def check_duplicates():
-    """Check for duplicate numbers within each category."""
-    errors = []
+from _library import front_matter, prompt_files
 
-    # Track numbers by category
-    category_numbers = defaultdict(list)
+INDEX_ROW = re.compile(r"^\|\s*`([^`]+)`\s*\|", re.M)
 
-    # Category directories
-    category_dirs = ['planning', 'setup', 'debugging', 'features', 'testing', 'cleaning', 'security']
 
-    for category_dir in category_dirs:
-        if os.path.isdir(category_dir):
-            for filename in os.listdir(category_dir):
-                if filename.endswith('.md'):
-                    # Extract number from filename
-                    match = re.match(r'^[A-Z]+-(\d{3})-', filename)
-                    if match:
-                        number = match.group(1)
-                        category_numbers[category_dir].append((number, filename))
-
-    # Check for duplicates within each category
-    for category, number_files in category_numbers.items():
-        numbers = [num for num, _ in number_files]
-        seen = set()
-
-        for number, filename in number_files:
-            if number in seen:
-                errors.append(f"Duplicate number {number} in {category}/: {filename}")
-            seen.add(number)
-
-    # Check project-specs for duplicate project IDs
-    if os.path.isdir('project-specs'):
-        project_numbers = defaultdict(list)
-
-        for filename in os.listdir('project-specs'):
-            if filename.endswith('.md'):
-                match = re.match(r'^(\d{3})-', filename)
-                if match:
-                    project_id = match.group(1)
-                    project_numbers[project_id].append(filename)
-
-        # This is actually OK for project specs - same project ID should have multiple docs
-        # Just report for information
-        for project_id, files in project_numbers.items():
-            if len(files) > 3:  # More than PRD, ARD, TRD
-                print(f"ℹ️  Project {project_id} has {len(files)} documents: {', '.join(files)}")
-
+def validate(root=None):
+    files = prompt_files(root)
+    ids = [(front_matter(p) or {}).get("id") or p.stem for p in files]
+    errors = [f"Duplicate prompt id: {i} ({n} files)" for i, n in Counter(ids).items() if n > 1]
+    index_path = (Path(root) / "prompts" / "README.md") if root else files[0].parent / "README.md"
+    if not index_path.is_file():
+        return errors + ["prompts/README.md index is missing"]
+    indexed = set(INDEX_ROW.findall(index_path.read_text(encoding="utf-8")))
+    stems = {p.stem for p in files}
+    errors += [f"{s}.md exists but is not listed in prompts/README.md" for s in sorted(stems - indexed)]
+    errors += [f"prompts/README.md lists '{s}' but prompts/{s}.md does not exist" for s in sorted(indexed - stems)]
     return errors
 
+
 def main():
-    """Main validation function."""
-    print("🔍 Checking for duplicate numbering...")
-
-    errors = check_duplicates()
-
+    print("🔍 Checking for duplicate ids and index drift...")
+    errors = validate()
     if errors:
-        print("❌ Duplicate number validation failed:")
-        for error in errors:
-            print(f"  - {error}")
+        print("❌ Duplicate/index check failed:")
+        for e in errors:
+            print(f"  - {e}")
         sys.exit(1)
-    else:
-        print("✅ No duplicate numbers found!")
+    print("✅ No duplicate ids; the index matches the library.")
+
 
 if __name__ == "__main__":
     main()

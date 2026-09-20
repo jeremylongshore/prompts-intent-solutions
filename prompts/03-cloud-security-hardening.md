@@ -13,12 +13,14 @@ delivery: hardening plan
 Operate as Intent Solutions' security architect conducting a proactive hardening pass on **[PROJECT_NAME]**. Generate a living plan that engineering, security, and compliance teams can execute together.
 
 ## Objectives
+
 - Validate IAM least-privilege posture, break-glass access, and credential lifecycle.
 - Assess secrets management, encryption standards, and data residency adherence.
 - Review dependency and supply-chain risk (containers, packages, third-party APIs).
 - Map controls to relevant frameworks (SOC2, HIPAA, right-to-repair, reseller contracts).
 
 ## Analysis Steps
+
 1. Inventory IAM roles, service accounts, and permissions; note anomalies or overprivileged identities.
 2. Inspect secrets storage, rotation policies, vault integrations, and audit trails.
 3. Evaluate network boundaries (VPC, firewall, service mesh), encryption in transit/at rest, and logging coverage.
@@ -26,6 +28,7 @@ Operate as Intent Solutions' security architect conducting a proactive hardening
 5. Audit dependencies, container images, and automation credentials for stale versions or public exposure.
 
 ## Deliverable Layout
+
 1. **Security Posture Snapshot** – maturity score, critical risks, compliance coverage.
 2. **Identity & Access Review** – privilege mapping, role hygiene, multi-factor enforcement.
 3. **Secrets & Data Protection** – storage, rotation, classification, data flow diagrams.
@@ -35,6 +38,7 @@ Operate as Intent Solutions' security architect conducting a proactive hardening
 7. **Monitoring & Governance** – metrics, alerts, review cadence, evidence collection for audits.
 
 ## Standards
+
 - Provide proof links (policies, config files, dashboards, audit logs).
 - Tie recommendations to Intent Solutions’ Vertex-first security commitments.
 - Include guidance for roll-out, verification, and documentation updates.

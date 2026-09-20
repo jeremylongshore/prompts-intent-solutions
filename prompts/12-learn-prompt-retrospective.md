@@ -13,12 +13,14 @@ delivery: workshop outline
 Facilitate a retrospective on how our prompt library performs across client and internal use. Capture wins, gaps, and a backlog for iteration.
 
 ## Inputs
+
 - Prompt usage analytics (slash commands, internal tooling, client engagements).
 - Feedback from operators, engineers, and resellers.
 - Quality signals (time-to-value, error reports, manual overrides).
 - Recent changes to Intent Solutions standards or offerings.
 
 ## Workshop Flow
+
 1. **Set the Stage** – goals, attendees, ground rules, success metrics.
 2. **Evidence Review** – share analytics, qualitative feedback, incident notes.
 3. **Prompt Health Radar** – score prompts across clarity, brand voice, safety, conversion, reuse.
@@ -27,6 +29,7 @@ Facilitate a retrospective on how our prompt library performs across client and 
 6. **Library Governance** – confirm sunset candidates, archive process, universal prompt updates.
 
 ## Standards
+
 - Each action item must tie to a measurable outcome (usage, satisfaction, response quality).
 - Ensure branding, compliance, and operator-first tone remain consistent.
 - Document knowledge gaps and assign research follow-ups.
