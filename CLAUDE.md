@@ -23,76 +23,60 @@ This is a comprehensive prompt engineering toolkit containing professional promp
 
 ## Architecture
 
-### Template Organization System
-Based on **ADR-001: Template System Architecture**, this repository follows a category-first hybrid numbering system:
+### Prompt Library Layout
+The library is the flat `prompts/` directory. `prompts/README.md` is its index and defines the
+front matter schema; the validators in `tools/` enforce both.
 
 ```
 prompts-intent-solutions/
-├── prompts/
-│   ├── development/       # Software development prompts
-│   │   ├── planning/      # PLAN-### templates
-│   │   ├── setup/         # SETUP-### templates
-│   │   ├── debugging/     # DEBUG-### templates
-│   │   ├── features/      # FEAT-### templates
-│   │   ├── testing/       # TEST-### templates
-│   │   ├── maintenance/   # CLEAN-### templates
-│   │   └── security/      # SEC-### templates
-│   ├── business/          # Business operations prompts
-│   │   ├── marketing/     # MARKET-### templates
-│   │   ├── finance/       # FINANCE-### templates
-│   │   ├── operations/    # OPS-### templates
-│   │   ├── customer-success/  # CS-### templates
-│   │   └── people-culture/    # PEOPLE-### templates
-│   └── specialized/       # Advanced/domain-specific prompts
-│       └── claude-agents/ # 74 Claude Code agent configurations
-├── project-specs/         # Project-correlated documents (PRD, ARD, TRD)
-├── tools/                 # Validation scripts and automation
-├── docs/                  # Architecture decisions and documentation
-└── 000-master-systems/    # Master automation workflows
+├── prompts/               # the library: NN-<service>-<slug>.md + README.md (index + schema)
+├── tools/                 # validators (validate_*.py, check_duplicates.py, test_validators.py)
+├── 000-master-systems/    # master system documents (doc-filing standard mirror)
+├── 01-Docs/               # filed docs
+├── docs/                  # static catalog site
+└── 99-Archive/            # retired material; not linted or validated
 ```
 
-### Template Naming Convention
-**Format**: `CATEGORY-###-description-MMDDYY.md`
+> The category folders (`prompts/development/...`, `planning/`, `setup/` and so on), `STRUCTURE.md`
+> and ADR-001 were removed in the 2025-11 rebuild. Sections further down this file that still name
+> them, or name `tools/automation/`, describe that older layout and are tracked for rewrite.
 
-- **CATEGORY**: Template type (PLAN, SETUP, DEBUG, FEAT, TEST, CLEAN, SEC, MARKET, FINANCE, OPS, CS, PEOPLE)
-- **###**: Sequential number within category (001, 002, 003...)
-- **description**: Kebab-case description (lowercase, hyphens)
-- **MMDDYY**: Creation or last major revision date
+### Prompt Naming Convention
+**Format**: `NN-<service>-<slug>.md`, two digits, lowercase, hyphenated. The front matter `id` must
+equal the filename without `.md`, and the prompt must have a row in `prompts/README.md`.
 
-**Examples**:
-- `SETUP-001-ai-assistant-092825.md`
-- `DEBUG-003-memory-leak-detection-092825.md`
-- `MARKET-001-linkedin-meeting-booker.md`
+**Examples**: `03-cloud-security-hardening.md`, `12-learn-operator-onboarding.md`
 
-### Template Structure Requirements
-Each template MUST include YAML frontmatter:
+### Front Matter Requirements
+Every prompt carries all nine fields (schema source: `prompts/README.md`):
 
 ```yaml
 ---
-name: descriptive-template-name
-description: Brief description of what this template does
-model: opus  # or sonnet, haiku, gpt-4, gpt-3.5
+id: 03-cloud-security-hardening        # equals the filename
+title: Human-readable name
+service_line: cloud-data | automation | ai-agents | private-ai | learn
+audience: primary reader
+intent: one-sentence job to be done
+last_reviewed: YYYY-MM-DD
+model_hint: claude-3-5-sonnet
+tone: descriptor
+delivery: expected deliverable format
 ---
-
-# Template content with clear prompts
 ```
 
 ## Development Commands
 
 ### Validation (Required Before Commits)
 ```bash
-# Run all validation checks
-python tools/validate_filenames.py     # Validate naming conventions
-python tools/validate_frontmatter.py  # Check YAML frontmatter structure
-python tools/validate_structure.py    # Verify repository structure
-python tools/check_duplicates.py      # Check for duplicate templates
-
-# Quick validation (all checks at once)
-python tools/validate_filenames.py && \
-  python tools/validate_frontmatter.py && \
-  python tools/validate_structure.py && \
-  python tools/check_duplicates.py
+python tools/validate_filenames.py     # NN-<service>-<slug>.md
+python tools/validate_frontmatter.py   # nine required fields, id == filename, service_line enum
+python tools/validate_structure.py     # the layout above
+python tools/check_duplicates.py       # unique ids; prompts/README.md index matches the files
+python tools/test_validators.py        # proves each validator rejects a bad library
 ```
+
+Every validator refuses an empty scan. Until 2026-09 they walked the removed category folders, found
+no files and reported success on nothing.
 
 ### Repository Automation
 ```bash

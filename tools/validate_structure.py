@@ -1,60 +1,35 @@
 #!/usr/bin/env python3
-"""
-Validate repository directory structure matches ADR-001 specifications.
-"""
+"""Validate the repository layout the library actually uses.
 
-import os
+This used to require the 2025-09 category folders (`planning/`, `setup/`, ...),
+`STRUCTURE.md` and an ADR that the 2025-11 rebuild deleted, so it failed on
+every run for ten months.
+"""
 import sys
+from pathlib import Path
 
-REQUIRED_DIRECTORIES = [
-    'planning',
-    'setup',
-    'debugging',
-    'features',
-    'testing',
-    'cleaning',
-    'security',
-    'project-specs',
-    'docs',
-    'tools'
-]
+ROOT = Path(__file__).resolve().parent.parent
+REQUIRED_DIRECTORIES = ["prompts", "tools", "000-master-systems"]
+REQUIRED_FILES = ["README.md", "CHANGELOG.md", "version.txt", ".gitignore", "prompts/README.md"]
 
-REQUIRED_FILES = [
-    'README.md',
-    'STRUCTURE.md',
-    '.gitignore',
-    'docs/ADR-001-TEMPLATE_SYSTEM_ARCHITECTURE.md'
-]
 
-def validate_structure():
-    """Validate that required directories and files exist."""
-    errors = []
-
-    # Check required directories
-    for directory in REQUIRED_DIRECTORIES:
-        if not os.path.isdir(directory):
-            errors.append(f"Missing required directory: {directory}")
-
-    # Check required files
-    for file_path in REQUIRED_FILES:
-        if not os.path.isfile(file_path):
-            errors.append(f"Missing required file: {file_path}")
-
+def validate(root=None):
+    base = Path(root) if root else ROOT
+    errors = [f"Missing required directory: {d}" for d in REQUIRED_DIRECTORIES if not (base / d).is_dir()]
+    errors += [f"Missing required file: {f}" for f in REQUIRED_FILES if not (base / f).is_file()]
     return errors
 
+
 def main():
-    """Main validation function."""
     print("🔍 Validating repository structure...")
-
-    errors = validate_structure()
-
+    errors = validate()
     if errors:
         print("❌ Structure validation failed:")
-        for error in errors:
-            print(f"  - {error}")
+        for e in errors:
+            print(f"  - {e}")
         sys.exit(1)
-    else:
-        print("✅ Repository structure validation passed!")
+    print("✅ Repository structure validation passed!")
+
 
 if __name__ == "__main__":
     main()

@@ -35,3 +35,6 @@ drafts/
 # Dolt database files (added by bd init)
 .dolt/
 *.db
+
+# Python bytecode
+__pycache__/

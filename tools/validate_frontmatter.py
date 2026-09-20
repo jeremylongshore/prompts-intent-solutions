@@ -1,90 +1,48 @@
 #!/usr/bin/env python3
-"""
-Validate YAML frontmatter in template files.
-"""
-
-import os
+"""Validate prompt front matter against the schema in prompts/README.md."""
+import datetime
 import sys
-import yaml
-import re
 
-REQUIRED_FRONTMATTER_FIELDS = ['name', 'description', 'model']
+from _library import front_matter, prompt_files
 
-def validate_frontmatter_file(filepath):
-    """Validate frontmatter in a single file."""
+REQUIRED = ["id", "title", "service_line", "audience", "intent",
+            "last_reviewed", "model_hint", "tone", "delivery"]
+SERVICE_LINES = {"cloud-data", "automation", "ai-agents", "private-ai", "learn"}
+
+
+def validate(root=None):
     errors = []
-
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Check if file starts with frontmatter
-        if not content.startswith('---'):
-            return [f"{filepath}: Missing frontmatter"]
-
-        # Extract frontmatter
-        parts = content.split('---', 2)
-        if len(parts) < 3:
-            return [f"{filepath}: Invalid frontmatter format"]
-
-        frontmatter_yaml = parts[1].strip()
-
-        try:
-            frontmatter = yaml.safe_load(frontmatter_yaml)
-        except yaml.YAMLError as e:
-            return [f"{filepath}: Invalid YAML in frontmatter - {e}"]
-
-        if not isinstance(frontmatter, dict):
-            return [f"{filepath}: Frontmatter must be a YAML object"]
-
-        # Check required fields
-        for field in REQUIRED_FRONTMATTER_FIELDS:
-            if field not in frontmatter:
-                errors.append(f"{filepath}: Missing required field '{field}'")
-            elif not frontmatter[field]:
-                errors.append(f"{filepath}: Field '{field}' cannot be empty")
-
-        # Validate specific field formats
-        if 'model' in frontmatter:
-            valid_models = ['opus', 'sonnet', 'haiku', 'gpt-4', 'gpt-3.5']
-            if frontmatter['model'] not in valid_models:
-                errors.append(f"{filepath}: Invalid model '{frontmatter['model']}' (valid: {', '.join(valid_models)})")
-
-    except Exception as e:
-        errors.append(f"{filepath}: Error reading file - {e}")
-
+    for path in prompt_files(root):
+        fm = front_matter(path)
+        if fm is None:
+            errors.append(f"{path.name}: missing or unparseable YAML front matter")
+            continue
+        for key in REQUIRED:
+            value = fm.get(key)
+            if value is None or (isinstance(value, str) and not value.strip()):
+                errors.append(f"{path.name}: front matter field '{key}' is missing or empty")
+        if fm.get("id") is not None and fm.get("id") != path.stem:
+            errors.append(f"{path.name}: id '{fm.get('id')}' does not match the filename")
+        if fm.get("service_line") is not None and fm.get("service_line") not in SERVICE_LINES:
+            errors.append(f"{path.name}: service_line '{fm.get('service_line')}' is not one of "
+                          f"{sorted(SERVICE_LINES)}")
+        reviewed = fm.get("last_reviewed")
+        if reviewed is not None and not isinstance(reviewed, datetime.date):
+            errors.append(f"{path.name}: last_reviewed must be a YYYY-MM-DD date")
     return errors
 
-def validate_frontmatter():
-    """Validate frontmatter in all template files."""
-    errors = []
-
-    # Find all .md files in template directories
-    template_dirs = ['planning', 'setup', 'debugging', 'features', 'testing', 'cleaning', 'security', 'project-specs']
-
-    for directory in template_dirs:
-        if os.path.isdir(directory):
-            for filename in os.listdir(directory):
-                if filename.endswith('.md'):
-                    filepath = os.path.join(directory, filename)
-                    file_errors = validate_frontmatter_file(filepath)
-                    errors.extend(file_errors)
-
-    return errors
 
 def main():
-    """Main validation function."""
     print("🔍 Validating frontmatter...")
-
-    errors = validate_frontmatter()
-
+    files = prompt_files()
+    errors = validate()
     if errors:
         print("❌ Frontmatter validation failed:")
-        for error in errors:
-            print(f"  - {error}")
+        for e in errors:
+            print(f"  - {e}")
         sys.exit(1)
-    else:
-        print("✅ Frontmatter validation passed!")
+    print(f"✅ Frontmatter validation passed! ({len(files)} prompts)")
+
 
 if __name__ == "__main__":
     main()

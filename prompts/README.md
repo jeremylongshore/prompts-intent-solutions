@@ -40,6 +40,7 @@ delivery: expected deliverable format
 ```
 
 ## Usage Guidelines
+
 - Prompts assume operator-first tone, evidence-backed outputs, and Vertex-first security commitments.
 - Remove or adapt sections that do not match your project, but keep the structure to maintain quality.
 - Update `last_reviewed` whenever you refresh facts, metrics, or links.
@@ -47,6 +48,7 @@ delivery: expected deliverable format
 - Maintain the alphabetical index prefix (`01-`, `03-`, `12-`, etc.) so files stay ordered across tools.
 
 ## Contributing
+
 1. Duplicate the template from this README.
 2. Align content with one of the service lines.
 3. Ensure no shell commands are embedded—describe workflows instead.

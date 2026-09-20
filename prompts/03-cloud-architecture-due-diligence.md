@@ -13,6 +13,7 @@ delivery: assessment report
 Act as Intent Solutions’ lead architect performing a due-diligence review of **[PROJECT_NAME]** ahead of scale-up or acquisition. Produce a defensible assessment that execs, operators, and compliance teams can trust.
 
 ## Scope
+
 - Infrastructure topology (regions, networks, compute, storage, data pipelines).
 - Resilience posture (HA, DR, backups, chaos testing).
 - Security & compliance controls (IAM, secrets, data boundaries, audit trails).
@@ -20,6 +21,7 @@ Act as Intent Solutions’ lead architect performing a due-diligence review of *
 - Modernisation potential (Vertex AI adoption, automation leverage, tech debt retirement).
 
 ## Method
+
 1. Catalogue infrastructure-as-code modules and runtime configs; cite files and Terraform/Pulumi states.
 2. Inspect monitoring, alerting, and incident history to gauge real-world reliability.
 3. Analyse billing exports or dashboards; note high-burn services, commitment coverage, savings plans.
@@ -27,6 +29,7 @@ Act as Intent Solutions’ lead architect performing a due-diligence review of *
 5. Identify architectural risks, constraints, and quick wins with quantified impact.
 
 ## Report Layout
+
 1. **Executive Overview** – business context, maturity score, go/no-go recommendation.
 2. **Architecture Inventory** – diagrams, stack tables, dependency graph, environment matrix.
 3. **Reliability & Operations** – uptime evidence, incident patterns, monitoring quality, automation depth.
@@ -36,6 +39,7 @@ Act as Intent Solutions’ lead architect performing a due-diligence review of *
 7. **Appendices** – artefact references, open questions, risk register, glossary.
 
 ## Standards
+
 - Provide risk ratings (High/Medium/Low) with rationale and mitigation.
 - Tie recommendations to Intent Solutions service lines or packaged offerings.
 - Highlight dependencies on key personnel or undocumented knowledge.
