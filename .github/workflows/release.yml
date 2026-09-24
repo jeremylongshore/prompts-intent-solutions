@@ -146,10 +146,20 @@ jobs:
             git log --pretty="- %s (%h)" "$PREV"..HEAD
           } > "$NOTES"
           if [ -f CHANGELOG.md ]; then
+            # CHANGELOG.md keeps a single H1 (markdownlint MD025): the entry is
+            # written as a "## [x.y.z] - date" section and inserted above the
+            # newest released section, below "## [Unreleased]".
+            ENTRY=$(mktemp)
+            {
+              echo "## [$NEW] - $DATE"
+              echo
+              echo "### Changes since $PREV"
+              echo
+              git log --pretty="- %s (%h)" "$PREV"..HEAD
+              echo
+            } > "$ENTRY"
             tmp=$(mktemp)
-            cat "$NOTES" > "$tmp"
-            echo -e "\n---\n" >> "$tmp"
-            cat CHANGELOG.md >> "$tmp"
+            awk -v f="$ENTRY" '!done && /^## / && !/Unreleased/ { while ((getline l < f) > 0) print l; done=1 } { print } END { if (!done) while ((getline l < f) > 0) print l }' CHANGELOG.md > "$tmp"
             mv "$tmp" CHANGELOG.md
           else
             cp "$NOTES" CHANGELOG.md

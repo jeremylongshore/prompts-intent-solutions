@@ -1,8 +1,24 @@
-# Release v2.0.0
+# Changelog
 
-**Release Date**: 2026-09-20
+All notable changes to this project will be documented in this file.
+Format: Newest entries on TOP (reverse chronological order).
 
-## Changes since v1.0.1
+## [Unreleased]
+
+### Changed
+
+- Applied MASTER DIRECTORY STANDARDS to repository structure
+- Updated README.md and CLAUDE.md with directory standards references
+- Reorganized CHANGELOG.md to newest-first format
+- Archived legacy multi-folder prompt catalog under `99-Archive/legacy-prompts/`
+- Introduced flat operator-grade prompt library aligned to Intent Solutions service lines
+- Replaced GitHub Pages site with dark, operator-first design fed by generated metadata
+- Added `tools/generate_prompt_catalog.py` to keep site data in sync with prompt front matter
+- Adopted alphabet-index numeric prefixes (`01-`, `03-`, `12-`, `15-`) across prompt IDs and filenames for consistent ordering
+
+## [2.0.0] - 2026-09-20
+
+### Changes since v1.0.1
 
 - chore: release v2.0.0 [skip ci] (61d05dc)
 - fix(ci): make the release workflow parse and make template validation check the library that exists (#9) (584599b)
@@ -24,26 +40,6 @@
 - ci(deps): bump actions/checkout from 4 to 5 (#6) (b6c9040)
 - ci(deps): bump DavidAnson/markdownlint-cli2-action from 13 to 20 (#5) (ffab31f)
 - ci(deps): bump actions/setup-python from 4 to 6 (#4) (d9bf73d)
-
----
-
-# Changelog
-
-All notable changes to this project will be documented in this file.
-Format: Newest entries on TOP (reverse chronological order).
-
-## [Unreleased]
-
-### Changed
-
-- Applied MASTER DIRECTORY STANDARDS to repository structure
-- Updated README.md and CLAUDE.md with directory standards references
-- Reorganized CHANGELOG.md to newest-first format
-- Archived legacy multi-folder prompt catalog under `99-Archive/legacy-prompts/`
-- Introduced flat operator-grade prompt library aligned to Intent Solutions service lines
-- Replaced GitHub Pages site with dark, operator-first design fed by generated metadata
-- Added `tools/generate_prompt_catalog.py` to keep site data in sync with prompt front matter
-- Adopted alphabet-index numeric prefixes (`01-`, `03-`, `12-`, `15-`) across prompt IDs and filenames for consistent ordering
 
 ## [1.0.1] - 2025-10-02
 
