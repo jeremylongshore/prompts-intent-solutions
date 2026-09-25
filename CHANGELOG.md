@@ -16,6 +16,13 @@ Format: Newest entries on TOP (reverse chronological order).
 - Added `tools/generate_prompt_catalog.py` to keep site data in sync with prompt front matter
 - Adopted alphabet-index numeric prefixes (`01-`, `03-`, `12-`, `15-`) across prompt IDs and filenames for consistent ordering
 
+## [2.0.1] - 2026-09-25
+
+### Changes since v2.0.0
+
+- chore: release v2.0.1 [skip ci] (b91e1cc)
+- docs(master-systems): add the terminal UI design master prompt (#11) (f2f0776)
+
 ## [2.0.0] - 2026-09-20
 
 ### Changes since v1.0.1
