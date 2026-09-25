@@ -16,6 +16,13 @@ Format: Newest entries on TOP (reverse chronological order).
 - Added `tools/generate_prompt_catalog.py` to keep site data in sync with prompt front matter
 - Adopted alphabet-index numeric prefixes (`01-`, `03-`, `12-`, `15-`) across prompt IDs and filenames for consistent ordering
 
+## [2.0.2] - 2026-09-25
+
+### Changes since v2.0.1
+
+- chore: release v2.0.2 [skip ci] (499153f)
+- ci(deps): pin the lint and scan actions CI resolves by floating major (#12) (ceff9a5)
+
 ## [2.0.1] - 2026-09-25
 
 ### Changes since v2.0.0
