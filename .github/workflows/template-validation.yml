@@ -39,7 +39,7 @@ jobs:
       run: python tools/test_validators.py
 
     - name: Validate markdown syntax
-      uses: DavidAnson/markdownlint-cli2-action@v23
+      uses: DavidAnson/markdownlint-cli2-action@ded1f9488f68a970bc66ea5619e13e9b52e601cd # v23.2.0
       with:
         # The maintained library. Archived and vendored markdown is not held to the lint.
         globs: |
