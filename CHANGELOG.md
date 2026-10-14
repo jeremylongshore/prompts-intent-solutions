@@ -16,6 +16,13 @@ Format: Newest entries on TOP (reverse chronological order).
 - Added `tools/generate_prompt_catalog.py` to keep site data in sync with prompt front matter
 - Adopted alphabet-index numeric prefixes (`01-`, `03-`, `12-`, `15-`) across prompt IDs and filenames for consistent ordering
 
+## [2.0.3] - 2026-10-14
+
+### Changes since v2.0.2
+
+- chore: release v2.0.3 [skip ci] (72ed056)
+- docs: display official Intent Solutions Select partner badge (#13) (4c42b49)
+
 ## [2.0.2] - 2026-09-25
 
 ### Changes since v2.0.1
